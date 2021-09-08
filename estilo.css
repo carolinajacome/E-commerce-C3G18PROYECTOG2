@@ -25,7 +25,7 @@ body {
 .form-title {
     color: black;
     text-transform: uppercase;
-    font-weight: 500;
+    font-weight: 400;
 }
 
 .form-box input[type="text"],
@@ -83,8 +83,8 @@ body {
 }
 
 .logo {
-    letter-spacing: 15px;
-    font-size: 1.4em;
+    letter-spacing: 14px;
+    font-size: 2em;
 }
 
 .navegacion ul {
