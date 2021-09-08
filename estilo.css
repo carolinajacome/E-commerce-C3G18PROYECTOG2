@@ -58,3 +58,52 @@ body {
 .form-box button[type="submit"]:hover {
     background: none;
 }
+
+.container {
+    width: 85%;
+    max-width: auto;
+    margin: 0 auto;
+}
+
+.header {
+    background: #e6edff;
+    width: 100%;
+    padding: 1rem 0;
+}
+
+.header a {
+    color: black;
+    text-decoration: none;
+}
+
+.logo-nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    letter-spacing: 15px;
+    font-size: 1.4em;
+}
+
+.navegacion ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.navegacion ul li {
+    display: inline-block;
+}
+
+.navegacion ul li a {
+    display: block;
+    padding: 0.5rem 1rem;
+    transition: all 0.4s linear;
+    border-radius: 5px;
+}
+
+.navegacion ul li a:hover {
+    background: white;
+}
