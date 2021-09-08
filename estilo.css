@@ -30,10 +30,31 @@ body {
 
 .form-box input[type="text"],
 .form-box input[type="password"],
-.form-box botton[type="submit"] {
+.form-box button[type="submit"] {
     border: 0;
     background: none;
     display: block;
     margin: 20px auto;
     padding: 14px 10px;
+    text-align: center;
+    border: 2px solid #dee7fe;
+    width: 200px;
+    outline: none;
+    transition: 0.25s;
+}
+
+.form-box input[type="text"]:focus,
+.form-box input[type="password"]:focus {
+    width: 230px;
+    border: 2px solid #dee7fe;
+}
+
+.form-box button[type="submit"] {
+    border: 2px solid #dee7fe;
+    background: #dee7fe;
+    cursor: pointer;
+}
+
+.form-box button[type="submit"]:hover {
+    background: none;
 }
