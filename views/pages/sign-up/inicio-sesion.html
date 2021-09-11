@@ -6,13 +6,28 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Iniciar sesión</title>
-    <!-- normalize CSS -->
-    <link rel="stylesheet" href="../../assets/css/normalize.css">
-    <!-- custom CSS -->
-    <link rel="stylesheet" href="../../../assets/css/inicio-sesion.css">
+    <!-- inicio-sesion CSS -->
+    <link rel="stylesheet" href="./../../../assets/css/inicio-sesion.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
 </head>
 
 <body>
+
+    <!-- header -->
+    <header>
+        <iframe src="../../includes/header.html" title="header" scrolling="no" frameborder="0" height="850px" width="100%" allowfullscreen></iframe>
+    </header>
+    <!-- fin header -->
+
+    <!-- navbar -->
+    <nav>
+        <iframe src="../../includes/navbar.html" title="navbar" scrolling="no" frameborder="0" height="850px" width="100%" allowfullscreen></iframe>
+    </nav>
+    <!-- fin navbar -->
+
+    <!-- main -->
     <main class="main">
         <div class="container">
             <form action="index.html" class="form-box" id="form">
@@ -23,13 +38,19 @@
                 <div class="grupo">
                     <input type="password" name="" id="password" placeholder="Contraseña">
                 </div>
-                <button type="submit">Iniciar sesión</button>
+                <button type="submit" id="Boton">Iniciar sesión</button>
                 <p class="warnings" id="warnings"></p>
             </form>
         </div>
     </main>
+    <!-- fin main -->
 
-    <!-- custom JS -->
+    <!-- footer -->
+    <footer>
+        <iframe src="../../includes/footer.html" title="footer" scrolling="no" frameborder="0" height="850px" width="100%" allowfullscreen></iframe>
+    </footer>
+    <!-- fin footer -->
+
     <script src="../../../assets/js/inicio-sesion.js"></script>
 
 </body>
