@@ -34,7 +34,9 @@ body {
 
 .contenedor .footer {
   grid-area: footer;
-  background-color: #196b9c;
+  background: #196b9c;
+  color: #fff;
+  padding: 40px;
 }
 
 .logo {
@@ -67,6 +69,36 @@ body {
   text-decoration: none;
 }
 
-.fas {
+.fas,
+.fab {
   margin: 0 20px 0;
+}
+
+.link-secondary {
+  text-decoration: none;
+}
+
+.link-secondary:hover {
+  font-weight: bold;
+  transition: width 2s, height 4s;
+}
+
+.contenedor .footer a {
+  color: #fff;
+  text-decoration: none;
+  display: inline-block;
+  margin-bottom: 20px;
+}
+
+.contenedor .footer a:hover {
+  color: #fff;
+}
+
+h4 {
+  padding-top: 40px;
+  padding-bottom: 40px;
+}
+
+.footerContactLine {
+ padding-bottom: 20px;
 }
