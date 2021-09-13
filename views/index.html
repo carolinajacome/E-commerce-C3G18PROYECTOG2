@@ -2,21 +2,201 @@
 <html lang="es">
 
 <head>
+    <!-- Required Meta Tags -->
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>J FOUR JEANS</title>
-    <!-- normalize CSS -->
+    <meta name="description" content="JFOURJEANS">
+    <meta name="keywords" content="JFOURJEANS">
+    <meta name="author" content="Stiward Carrillo R">
+    <title>JFOURJEANS</title>
+    <!-- Normalize CSS -->
     <link rel="stylesheet" href="../assets/css/normalize.css">
-    <!-- custom CSS -->
+    <!-- Custom styles for this template -->
     <link rel="stylesheet" href="../assets/css/index.css">
+    <!-- Google Fonts CSS -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;1,100&display=swap" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+        integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
+    <!-- Favicons -->
+    <link rel="icon" href="../assets/img/favicons/favicon-32x32.png" sizes="32x32" type="image/png">
+    <link rel="icon" href="../assets/img/favicons/favicon-16x16.png" sizes="16x16" type="image/png">
+    <link rel="icon" href="../assets/img/favicons/favicon.ico">
 </head>
 
 <body>
+    <div class="contenedor">
 
+        <!-- header -->
+        <header class="header blog-header py-3">
+            <div class="row">
+                <div class="col d-flex justify-content-center align-items-center">
+                    <a class="blog-header-logo text-dark" href="#">JFOURJEANS</a>
+                </div>
+            </div>
+        </header>
+        <!-- fin header -->
+
+        <!-- navbar -->
+        <nav class="navbar">
+            <div class="col-2">
+                <a class="navbar-brand d-flex justify-content-center align-items-center" href="#">
+                    <img src="../assets/img/JFOURJEANS-logo.png" class="logo" alt="">
+                </a>
+            </div>
+            <div class="col-6 d-flex justify-content-between">
+                <a class="p-2 link-secondary" href="#">INICIO</a>
+                <a class="p-2 link-secondary" href="#">DAMA</a>
+                <a class="p-2 link-secondary" href="#">CABALLERO</a>
+                <a class="p-2 link-secondary" href="#">PROMOCIÓN</a>
+                <a class="p-2 link-secondary" href="#">BLOG</a>
+                <a class="p-2 link-secondary" href="#">CONTACTO</a>
+            </div>
+            <div class="col-2 d-flex justify-content-end">
+                <a class="p-2 link-secondary" href="#"><i class="fas fa-search"></i></a>
+                <a class="p-2 link-secondary" href="#"><i class="fas fa-user"></i></a>
+                <a class="p-2 link-secondary" href="#"><i class="fas fa-shopping-cart"></i></a>
+            </div>
+        </nav>
+        <!-- fin navbar -->
+
+        <!-- main -->
+        <main class="contenido">
+            <div class="row">
+                <!-- carousel -->
+                <div class="col-9">
+                    <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
+                        <div class="carousel-indicators">
+                            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0"
+                                class="active" aria-current="true" aria-label="Slide 1"></button>
+                            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1"
+                                aria-label="Slide 2"></button>
+                            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2"
+                                aria-label="Slide 3"></button>
+                        </div>
+                        <div class="carousel-inner">
+                            <div class="carousel-item active">
+                                <img src="../assets/img/img-1.jpg" class="img-carousel" alt="...">
+                                <div class="carousel-caption d-none d-md-block">
+                                    <h5>First slide label</h5>
+                                    <p>Some representative placeholder content for the first slide.</p>
+                                </div>
+                            </div>
+                            <div class="carousel-item">
+                                <img src="../assets/img/img-2.jpg" class="img-carousel" alt="...">
+                                <div class="carousel-caption d-none d-md-block">
+                                    <h5>Second slide label</h5>
+                                    <p>Some representative placeholder content for the second slide.</p>
+                                </div>
+                            </div>
+                            <div class="carousel-item">
+                                <img src="../assets/img/img-3.jpg" class="img-carousel" alt="...">
+                                <div class="carousel-caption d-none d-md-block">
+                                    <h5>Third slide label</h5>
+                                    <p>Some representative placeholder content for the third slide.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions"
+                            data-bs-slide="prev">
+                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                            <span class="visually-hidden">Previous</span>
+                        </button>
+                        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions"
+                            data-bs-slide="next">
+                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                            <span class="visually-hidden">Next</span>
+                        </button>
+                    </div>
+                </div>
+                <!-- fin carousel -->
+
+                <!-- img -->
+                <div class="col-3">
+                    <a href="#">
+                        <img src="../assets/img/img-4.jpg" class="img-foto mb-4" alt="">
+                    </a>
+                    <a href="#">
+                        <img src="../assets/img/img-5.jpg" class="img-foto" alt="">
+                    </a>
+                </div>
+                <!-- fin img -->
+            </div>
+
+
+            <div>
+                <div class="row">
+                    <div class="col text-center">
+                        <h3 class="mt-5 mb-5">MÁS VENDIDOS</h3>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col">
+                    <div class="row row-cols-1 row-cols-md-4 g-4">
+                        <div class="col">
+                            <div class="card h-100">
+                                <img src="../assets/img/JFOURJEANS-logo.png" class="card-img-top" alt="...">
+                                <div class="card-body">
+                                    <h5 class="card-title">Card title</h5>
+                                    <p class="card-text">This is a longer card with supporting text below as a
+                                        natural lead-in to additional content. This content is a little bit longer.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div class="card h-100">
+                                <img src="../assets/img/JFOURJEANS-logo.png" class="card-img-top" alt="...">
+                                <div class="card-body">
+                                    <h5 class="card-title">Card title</h5>
+                                    <p class="card-text">This is a longer card with supporting text below as a
+                                        natural lead-in to additional content. This content is a little bit longer.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div class="card h-100">
+                                <img src="../assets/img/JFOURJEANS-logo.png" class="card-img-top" alt="...">
+                                <div class="card-body">
+                                    <h5 class="card-title">Card title</h5>
+                                    <p class="card-text">This is a longer card with supporting text below as a
+                                        natural lead-in to additional content.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div class="card h-100">
+                                <img src="../assets/img/JFOURJEANS-logo.png" class="card-img-top" alt="...">
+                                <div class="card-body">
+                                    <h5 class="card-title">Card title</h5>
+                                    <p class="card-text">This is a longer card with supporting text below as a
+                                        natural lead-in to additional content. This content is a little bit longer.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+        <!-- fin main -->
+
+        <!-- footer -->
+        <footer class="footer mt-4">
+
+        </footer>
+        <!-- fin footer -->
+    </div>
 
     <!-- Bootstrap Bundle with Popper -->
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"
