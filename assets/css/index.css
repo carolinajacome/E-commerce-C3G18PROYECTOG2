@@ -100,5 +100,24 @@ h4 {
 }
 
 .footerContactLine {
- padding-bottom: 20px;
+  padding-bottom: 20px;
+}
+
+.borde {
+  border: 1px solid #e5e5e5;
+}
+
+.grupo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 20px;
+}
+
+.grupo input {
+  width: 50%;
+}
+
+.button {
+  background: #196b9c;
 }

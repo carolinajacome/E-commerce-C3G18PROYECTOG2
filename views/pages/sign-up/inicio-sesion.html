@@ -2,36 +2,211 @@
 <html lang="es">
 
 <head>
+    <!-- Required Meta Tags -->
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Iniciar sesión</title>
-    <!-- normalize CSS -->
-    <link rel="stylesheet" href="../../assets/css/normalize.css">
-    <!-- custom CSS -->
-    <link rel="stylesheet" href="../../../assets/css/inicio-sesion.css">
+    <meta name="description" content="JFOURJEANS">
+    <meta name="keywords" content="JFOURJEANS">
+    <meta name="author" content="Stiward Carrillo R">
+    <title>JFOURJEANS</title>
+    <!-- Normalize CSS -->
+    <link rel="stylesheet" href="../../../assets/css/normalize.css">
+    <!-- Custom styles for this template -->
+    <link rel="stylesheet" href="../../../../assets/css/index.css">
+    <!-- Google Fonts CSS -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;1,100&display=swap" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+        integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
+    <!-- Favicons -->
+    <link rel="icon" href="../../../assets/img/favicons/favicon-32x32.png" sizes="32x32" type="image/png">
+    <link rel="icon" href="../../../assets/img/favicons/favicon-16x16.png" sizes="16x16" type="image/png">
+    <link rel="icon" href="../../../assets/img/favicons/favicon.ico">
 </head>
 
 <body>
-    <main class="main">
-        <div class="container">
-            <form action="index.html" class="form-box" id="form">
-                <h1 class="form-title">Iniciar sesión</h1>
-                <div class="grupo">
-                    <input type="email" name="" id="email" placeholder="Email">
-                </div>
-                <div class="grupo">
-                    <input type="password" name="" id="password" placeholder="Contraseña">
-                </div>
-                <button type="submit">Iniciar sesión</button>
-                <p class="warnings" id="warnings"></p>
-            </form>
-        </div>
-    </main>
+    <div class="contenedor">
 
-    <!-- custom JS -->
-    <script src="../../../assets/js/inicio-sesion.js"></script>
+        <!-- header -->
+        <header class="header blog-header py-3">
+            <div class="row">
+                <div class="col d-flex justify-content-center align-items-center">
+                    <a class="blog-header-logo text-dark" href="#">JFOURJEANS</a>
+                </div>
+            </div>
+        </header>
+        <!-- fin header -->
 
+        <!-- navbar -->
+        <nav class="navbar">
+            <div class="col-2">
+                <a class="navbar-brand d-flex justify-content-center align-items-center" href="#">
+                    <img src="../../../assets/img/JFOURJEANS-logo.png" class="logo" alt="">
+                </a>
+            </div>
+            <div class="col-6 d-flex justify-content-between">
+                <a class="p-2 link-secondary" href="#">INICIO</a>
+                <a class="p-2 link-secondary" href="#">DAMA</a>
+                <a class="p-2 link-secondary" href="#">CABALLERO</a>
+                <a class="p-2 link-secondary" href="#">PROMOCIÓN</a>
+                <a class="p-2 link-secondary" href="#">BLOG</a>
+                <a class="p-2 link-secondary" href="#">CONTACTO</a>
+            </div>
+            <div class="col-2 d-flex justify-content-end">
+                <a class="p-2 link-secondary" href="#"><i class="fas fa-search"></i></a>
+                <a class="p-2 link-secondary" href="#"><i class="fas fa-user"></i></a>
+                <a class="p-2 link-secondary" href="#"><i class="fas fa-shopping-cart"></i></a>
+            </div>
+        </nav>
+        <!-- fin navbar -->
+
+        <!-- main -->
+        <main class="contenido">
+            <div class="container borde">
+                <div class="row">
+                    <div class="col grupo">
+                        <h1>INICIAR SESIÓN</h1>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col">
+                        <div class="grupo">
+                            <input type="email" name="" id="email" placeholder="Email">
+                        </div>
+                        <div class="grupo">
+                            <input type="password" name="" id="password" placeholder="Contraseña">
+                        </div>
+                        <div class="grupo">
+                            <button class="button" type="submit">Iniciar sesión</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+        <!-- fin main -->
+
+        <!-- footer -->
+        <footer class="footer mt-4">
+            <div class="row blog-header">
+                <div class="col-3">
+                    <h4 class="velaFooterTitle">
+                        Contact us
+                    </h4>
+                    <a class="navbar-brand d-flex justify-content-start align-items-start" href="#">
+                        <img src="../../../assets/img/JFOURJEANS-logo.png" class="logo" alt="">
+                    </a>
+                    <div class="velaContent">
+                        <div class="footerContactInfo">
+                            <div class="footerContactLine">
+                                221b Notingham Forest - London - UK
+                            </div>
+                            <div class="footerContactLine">
+                                0123 456 789 - 0123 987 654
+                            </div>
+                            <div class="footerContactLine">
+                                <a href="mailto:velatheme@gmail.com">velatheme@gmail.com</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-3">
+                    <h4 class="velaFooterTitle">Support</h4>
+                    <div class="velaContent">
+                        <ul class="velaFooterLinks list-unstyled">
+                            <li class="">
+                                <a href="/pages/about-us" class="social" title="">Shipping & Return</a>
+                            </li>
+                            <li class="">
+                                <a href="/pages/contact-us" title="">Our Policy</a>
+                            </li>
+
+                            <li class="">
+                                <a href="/pages/sitemap" title="">Terms & Conditions</a>
+                            </li>
+
+                            <li class="">
+                                <a href="/pages/faqs" title="">F.A.Qs</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-3">
+                    <h4 class="velaFooterTitle">About us</h4>
+                    <div class="velaContent">
+                        <ul class="velaFooterLinks list-unstyled">
+                            <li class="">
+                                <a href="/pages/about-us" title="">About us</a>
+                            </li>
+
+                            <li class="">
+                                <a href="/pages/contact-us" title="">Contact</a>
+                            </li>
+
+                            <li class="">
+                                <a href="/collections/all" title="">Official Store</a>
+                            </li>
+
+                            <li class="">
+                                <a href="/pages/contact-us" title="">Join us</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-3">
+                    <h4 class="velaFooterTitle">Account</h4>
+                    <div class="velaContent">
+                        <ul class="velaFooterLinks list-unstyled">
+                            <li class="">
+                                <a href="/account/login" title="">Login</a>
+                            </li>
+
+                            <li class="">
+                                <a href="/account/register" title="">Register</a>
+                            </li>
+
+                            <li class="">
+                                <a href="/account" title="">Order History</a>
+                            </li>
+
+                            <li class="">
+                                <a href="/checkout" title="">Check out</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-12 d-flex justify-content-between pt-4">
+                    <div class="velaCopyRight">Copyright © 2018 Velatheme. All Rights Reserved</div>
+                    <div class="velaFooterSocial">
+                        <a class="link-secondary" href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a class="link-secondary" href="#"><i class="fab fa-twitter"></i></a>
+                        <a class="link-secondary" href="#"><i class="fab fa-instagram"></i></a>
+                        <a class="link-secondary" href="#"><i class="fab fa-pinterest"></i></a>
+                        <a class="link-secondary" href="#"><i class="fab fa-youtube"></i></a>
+                        <a class="link-secondary" href="#"><i class="fab fa-google-plus-g"></i></i></a>
+                    </div>
+                </div>
+            </div>
+        </footer>
+        <!-- fin footer -->
+    </div>
+
+    <!-- Bootstrap Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"
+        integrity="sha384-W8fXfP3gkOKtndU4JGtKDvXbO53Wy8SZCQHczT5FMiiqmQfUpWbYdTil/SxwZgAN" crossorigin="anonymous">
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.min.js"
+        integrity="sha384-skAcpIdS7UcVUC05LJ9Dxay8AXcDYfBJqt1CJ85S/CFujBsIzCIv+l9liuYLaMQ/" crossorigin="anonymous">
+    </script>
 </body>
 
 </html>
