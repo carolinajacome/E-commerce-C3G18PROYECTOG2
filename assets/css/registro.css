@@ -1,0 +1,157 @@
+body {
+  background-color: #f1f1f1;
+  font-family: "Poppins", sans-serif;
+}
+
+.section-wrap {
+  width: 100%;
+  max-width: 600px;
+  margin: 100px auto;
+  padding: 5px;
+  background-color: #e5e3e3;
+}
+
+.section-wrap .form-box {
+  background-color: #ffffff;
+  padding: 10px 10px 10px 10px;
+  font-size: 18px;
+}
+
+.section-wrap .form-box h1 {
+  text-align: center;
+  color: #234351;
+  margin-bottom: 10px;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.3);
+}
+
+.input-group,
+.input-checkbox {
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+.input-group input[type="password"],
+.input-group button[type="button"] {
+  display: inline-block;
+}
+
+.input-name,
+.input-last-name {
+  width: 50%;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="password"] {
+  border: 2px solid #e5e3e3;
+  padding: 5px 10px;
+  outline: none;
+  color: #234351;
+}
+
+.nombre {
+  width: 95%;
+}
+
+.apellido {
+  width: 100%;
+}
+
+input[type="email"] {
+  width: 100%;
+}
+
+button {
+  background: none;
+  border: none;
+}
+
+.input-group input[type="password"] {
+  width: 90%;
+  color: #234351;
+  border: 2px solid #e5e3e3;
+}
+
+.input-group button[type="button"] {
+  width: 10%;
+  color: #234351;
+  border: 2px solid #e5e3e3;
+}
+
+.input-checkbox input[type="checkbox"] {
+  margin: 0 5px 0 5px;
+}
+
+.button {
+  width: 100%;
+  max-width: 300px;
+  margin: auto;
+  padding-bottom: 10px;
+  text-align: center;
+}
+
+button[type="submit"] {
+  background: rgb(35, 67, 81);
+  position: relative;
+  color: #fff;
+  padding: 8px 22px;
+  cursor: pointer;
+  border: none;
+  border-radius: 15px;
+}
+
+/* Clases para comprobación de campos y checkbox */
+.form-box__group_incorrect .nombre,
+.form-box__group_incorrect .apellido,
+.form-box__group_incorrect .email,
+.form-box__group_incorrect input[type="password"] {
+  border: 2px solid #ff0000;
+  color: #ff0000;
+  transition-property: all 0.2s linear;
+}
+
+.form-box__group_correct .nombre,
+.form-box__group_correct .apellido,
+.form-box__group_correct .email,
+.form-box__group_correct input[type="password"] {
+  border: 2px solid #8ae600;
+  transition-property: all 0.2s linear;
+}
+
+.paragraph_input-error {
+  font-size: 13px;
+  margin-bottom: 20px;
+  padding-left: 10px;
+  display: none;
+}
+
+.paragraph_input-error-active {
+  color: #ff0000;
+  display: block;
+}
+
+.form__message {
+  height: 45px;
+  line-height: 45px;
+  background: #f66060;
+  padding: 0 15px;
+  margin-bottom: 20px;
+  border-radius: 3px;
+  display: none;
+}
+
+.form__message-active {
+  display: block;
+}
+
+.form__successful-message {
+  font-size: 14px;
+  color: #119200;
+  text-align: center;
+  margin-top: 10px;
+  display: none;
+}
+
+.form__successful-message-active {
+  display: block;
+}
