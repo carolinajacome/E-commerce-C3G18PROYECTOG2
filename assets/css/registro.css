@@ -159,10 +159,17 @@ button {
   border: 2px solid #E5E3E3;
 }
 
-.input-group button[type="button"] {
+.input-group #pass-button,
+.input-group #con_pass-button {
   width: 10%;
   color: #234351;
   border: 2px solid #E5E3E3;
+}
+
+.input-group #pass-button:hover,
+.input-group #con_pass-button:hover {
+  border: 2px solid #234351;
+  transition: border 0.2s linear;
 }
 
 .input-checkbox input[type="checkbox"] {
@@ -194,7 +201,7 @@ button[type="submit"] {
 .form-box__group_incorrect  input[type="password"] {
   border: 2px solid #FF0000;
   color: #FF0000;
-  transition-property: all 0.2s linear;
+  transition: all 0.2s linear;
 }
 
 .form-box__group_correct .nombre,
@@ -202,7 +209,14 @@ button[type="submit"] {
 .form-box__group_correct .email,
 .form-box__group_correct input[type="password"] {
   border: 2px solid #8AE600;
-  transition-property: all 0.2s linear;
+  transition: all 0.2s linear;
+}
+
+.form-box__group-button-view #pass-button,
+.form-box__group-button-view #con_pass-button {
+  color: #FFFFFF;
+  background-color: #234351;
+  transition: all 0.7s linear;
 }
 
 .paragraph_input-error {
@@ -233,7 +247,7 @@ button[type="submit"] {
 
 .form__successful-message {
 	font-size: 14px;
-	color: #119200;
+	color: #234351;
   text-align: center;
   margin-top: 10px;
 	display: none;
@@ -243,4 +257,7 @@ button[type="submit"] {
 	display: block;
 }
 
+.input-group__width input[type="text"] {
+  width: 90%;
+}
 

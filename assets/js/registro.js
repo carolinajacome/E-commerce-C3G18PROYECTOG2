@@ -1,5 +1,13 @@
 const form = document.getElementById('reg-form');
 const inputs = document.querySelectorAll('#reg-form input');
+const btn1 = document.getElementById('pass-button');
+const btn2 = document.getElementById('con_pass-button');
+const iput1 = document.querySelector('#reg-form .password');
+const iput2 = document.querySelector('#reg-form .con_password');
+const inputPassword = document.getElementById('password');
+const inputConPassword = document.getElementById('con_password');
+var contador1 = 0;
+var contador2 = 0;
 
 const expresiones = {
 	usuario: /^[a-zA-Z0-9\_\-]{4,16}$/, // Letras, numeros, guion y guion_bajo
@@ -14,10 +22,11 @@ const campos = {
     nombre: false,
     apellido: false,
     email: false,
-    password: false
+    password: false,
+    con_password: false
 }
 
-const validarForm = (e) => {
+function validarForm(e) {
     switch (e.target.name) {
         case "nombre":
             validarCampo(expresiones.nombre, e.target, 'nombre', 'paragraphNombre_Apellido');
@@ -30,7 +39,6 @@ const validarForm = (e) => {
         break;
         case "password":
             validarCampo(expresiones.password, e.target, 'password', 'paragraphPassword');
-            validarConPassword();
         break;
         case "con_password":
             validarConPassword();
@@ -38,7 +46,7 @@ const validarForm = (e) => {
     }
 }
 
-const validarCampo = (expresion, input, campo, campo1) => {
+function validarCampo(expresion, input, campo, campo1) {
     if (expresion.test(input.value)) {
         document.getElementById(`group__${campo}`).classList.remove('form-box__group_incorrect');
         document.getElementById(`group__${campo}`).classList.add('form-box__group_correct');
@@ -52,21 +60,68 @@ const validarCampo = (expresion, input, campo, campo1) => {
     }
 }
 
-const validarConPassword = () => {
+function validarConPassword() {
 	const inputPassword = document.getElementById('password');
 	const inputConPassword = document.getElementById('con_password');
 
-	if(inputPassword.value !== inputConPassword.value){
+	if(inputPassword.value != inputConPassword.value){
+        console.log('No son iguales');
         document.getElementById(`group__con_password`).classList.remove('form-box__group_correct');
         document.getElementById(`group__con_password`).classList.add('form-box__group_incorrect');
-        document.querySelector(`#group__con_password .paragraph_input-error`).classList.remove('paragraph_input-error-active');
-		campos['password'] = false;
-	} else {
-		document.getElementById(`group__con_password`).classList.remove('form-box__group_incorrect');
-        document.getElementById(`group__con_pasword`).classList.add('form-box__group_correct');
-        document.querySelector(`#group__con_password .paragraph_input-error`).classList.add('paragraph_input-error-active');
-		campos['password'] = true;
-	}
+        document.querySelector(`#group__paragraphConPassword .paragraph_input-error`).classList.add('paragraph_input-error-active');
+		campos['con_password'] = false;
+	} else if (inputPassword.value === inputConPassword.value && inputPassword.value != "" && inputConPassword.value != "") {
+        console.log('Sí son iguales');
+        document.getElementById(`group__con_password`).classList.remove('form-box__group_incorrect');
+        document.getElementById(`group__con_password`).classList.add('form-box__group_correct');
+        document.querySelector(`#group__paragraphConPassword .paragraph_input-error`).classList.remove('paragraph_input-error-active');
+		campos['con_password'] = true;
+    }
+}
+
+btn1.addEventListener('click', tipoInput1, false);
+btn2.addEventListener('click', tipoInput2, false);
+
+function tipoInput1() {
+    if (inputPassword) {
+        if (contador1 != 0) {
+            console.log('funciona1');
+            document.getElementById(`group__password`).classList.remove('form-box__group-button-view');
+            document.getElementById(`group__password`).classList.remove('input-group__width')
+            contador1 = 0;
+        } else {
+            console.log('funciona2');
+            document.getElementById(`group__password`).classList.add('form-box__group-button-view');
+            document.getElementById(`group__password`).classList.add('input-group__width')
+            contador1 = 1;
+        }
+    }
+    if (iput1.type == "password") {
+        iput1.type = "text";
+    } else {
+        iput1.type = "password";
+    }
+}
+
+function tipoInput2() {
+    if (inputConPassword) {
+        if (contador2 != 0) {
+            console.log('funciona3');
+            document.getElementById(`group__con_password`).classList.remove('form-box__group-button-view');
+            document.getElementById(`group__con_password`).classList.remove('input-group__width')
+            contador2 = 0;
+        } else {
+            console.log('funciona4');
+            document.getElementById(`group__con_password`).classList.add('form-box__group-button-view');
+            document.getElementById(`group__con_password`).classList.add('input-group__width')
+            contador2 = 1;
+        }
+    }
+    if (iput2.type == "password") {
+        iput2.type = "text";
+    } else {
+        iput2.type = "password";
+    }
 }
 
 inputs.forEach((input) => {
@@ -77,7 +132,7 @@ inputs.forEach((input) => {
 form.addEventListener('submit', (e) => {
     e.preventDefault();
     const terms = document.getElementById('checkbox');
-    if (campos.nombre && campos.apellido && campos.password && campos.email && terms.checked ) {
+    if (campos.nombre && campos.apellido && campos.password && campos.email && terms.checked) {
         form.reset();
 
         document.getElementById('form__successful-message').classList.add('form__successful-message-active');
