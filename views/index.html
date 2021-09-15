@@ -1,95 +1,285 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 
 <head>
+    <!-- Required Meta Tags -->
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-
-    <!--Block Bootstrap-->
+    <meta name="description" content="JFOURJEANS">
+    <meta name="keywords" content="JFOURJEANS">
+    <meta name="author" content="Stiward Carrillo R">
+    <title>JFOURJEANS | INICIO</title>
+    <!-- Normalize CSS -->
+    <link rel="stylesheet" href="../assets/css/normalize.css">
+    <!-- Custom styles for this template -->
+    <link rel="stylesheet" href="../assets/css/index.css">
+    <!-- Google Fonts CSS -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;1,100&display=swap" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+        integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
-
-
-    <!--End Block Bootstrap-->
-
+    <!-- Favicons -->
+    <link rel="icon" href="../assets/img/favicons/favicon-32x32.png" sizes="32x32" type="image/png">
+    <link rel="icon" href="../assets/img/favicons/favicon-16x16.png" sizes="16x16" type="image/png">
+    <link rel="icon" href="../assets/img/favicons/favicon.ico">
 </head>
 
 <body>
-    <!--Block NavBar-->
+    <div class="contenedor">
 
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
-        <div class="container-fluid">
-            <!--image-Logo-->
-            <div class="d-flex align-items-center">
-                <div class="flex-shrink-0">
-              
-          <a class="navbar-brand collapse d-flex justify-content-right" href="#">
-            <img src="../assets/img/logoJFOURJEANS_2021.png" alt="" width="125" height="103.25">
-          </a>
-          </div>
-          </div>
-          <!-- End image-Logo-->
-          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-          </button>
-          <div class="collapse navbar-collapse d-flex justify-content-center" id="navbarSupportedContent">
-            <ul class="navbar-nav  mb-2 mb-lg-0">
-              <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="#">INICIO</a>
-              </li>
-             
-              <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                  DAMA
+        <!-- header -->
+        <header class="header blog-header py-3">
+            <div class="row">
+                <div class="col d-flex justify-content-center align-items-center">
+                    <a class="blog-header-logo text-dark" href="#">JFOURJEANS</a>
+                </div>
+            </div>
+        </header>
+        <!-- fin header -->
+
+        <!-- navbar -->
+        <nav class="navbar">
+            <div class="col-2">
+                <a class="navbar-brand d-flex justify-content-center align-items-center" href="#">
+                    <img src="../assets/img/JFOURJEANS-logo.png" class="logo" alt="">
                 </a>
-                <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                  <li><a class="dropdown-item" href="#">Jeans</a></li>
-                  <li><a class="dropdown-item" href="#">Blusas</a></li>
-                 
-                  <li><a class="dropdown-item" href="#">Shorts</a></li>
-                </ul>
-              </li>
+            </div>
+            <div class="col-6 d-flex justify-content-between">
+                <a class="p-2 link-secondary" href="#">INICIO</a>
+                <a class="p-2 link-secondary" href="pages/public/dama.html">DAMA</a>
+                <a class="p-2 link-secondary" href="pages/public/caballero.html">CABALLERO</a>
+                <a class="p-2 link-secondary" href="pages/public/promocion.html">PROMOCIÓN</a>
+                <a class="p-2 link-secondary" href="pages/public/blog.html">BLOG</a>
+                <a class="p-2 link-secondary" href="pages/public/contacto.html">CONTACTO</a>
+            </div>
+            <div class="col-2 d-flex justify-content-end">
+                <a class="p-2 link-secondary" href="#"><i class="fas fa-search"></i></a>
+                <a class="p-2 link-secondary" href="../views/pages/sign-up/inicio-sesion.html"><i class="fas fa-user"></i></a>
+                <a class="p-2 link-secondary" href="#"><i class="fas fa-shopping-cart"></i></a>
+            </div>
+        </nav>
+        <!-- fin navbar -->
 
-              <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                  CABALLERO
-                </a>
-                <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                  <li><a class="dropdown-item" href="#">Jeans</a></li>
-                 
-                  <li><a class="dropdown-item" href="#">Camisas</a></li>
-                  
-                  <li><a class="dropdown-item" href="#">Bermudas</a></li>
-                </ul>
-              </li>
-              
-              <li class="nav-item">
-                <a class="nav-link" href="#">PROMOCIÓN</a>
-              </li> 
+        <!-- main -->
+        <main class="contenido">
+            <div class="row">
+                <!-- carousel -->
+                <div class="col-9">
+                    <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
+                        <div class="carousel-indicators">
+                            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0"
+                                class="active" aria-current="true" aria-label="Slide 1"></button>
+                            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1"
+                                aria-label="Slide 2"></button>
+                            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2"
+                                aria-label="Slide 3"></button>
+                        </div>
+                        <div class="carousel-inner">
+                            <div class="carousel-item active">
+                                <img src="../assets/img/img-1.jpg" class="img-carousel" alt="...">
+                                <div class="carousel-caption d-none d-md-block">
+                                    <h5>First slide label</h5>
+                                    <p>Some representative placeholder content for the first slide.</p>
+                                </div>
+                            </div>
+                            <div class="carousel-item">
+                                <img src="../assets/img/img-2.jpg" class="img-carousel" alt="...">
+                                <div class="carousel-caption d-none d-md-block">
+                                    <h5>Second slide label</h5>
+                                    <p>Some representative placeholder content for the second slide.</p>
+                                </div>
+                            </div>
+                            <div class="carousel-item">
+                                <img src="../assets/img/img-3.jpg" class="img-carousel" alt="...">
+                                <div class="carousel-caption d-none d-md-block">
+                                    <h5>Third slide label</h5>
+                                    <p>Some representative placeholder content for the third slide.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions"
+                            data-bs-slide="prev">
+                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                            <span class="visually-hidden">Previous</span>
+                        </button>
+                        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions"
+                            data-bs-slide="next">
+                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                            <span class="visually-hidden">Next</span>
+                        </button>
+                    </div>
+                </div>
+                <!-- fin carousel -->
 
-              <li class="nav-item">
-                <a class="nav-link" href="#">BLOG</a>
-              </li> 
+                <!-- img -->
+                <div class="col-3">
+                    <a href="#">
+                        <img src="../assets/img/img-4.jpg" class="img-foto mb-4" alt="">
+                    </a>
+                    <a href="#">
+                        <img src="../assets/img/img-5.jpg" class="img-foto" alt="">
+                    </a>
+                </div>
+                <!-- fin img -->
+            </div>
 
-              <li class="nav-item">
-                <a class="nav-link" href="#">CONTACTO</a>
-              </li> 
-              
-            </ul>
-            
-          </div>
-        </div>
-      </nav> 
 
+            <div>
+                <div class="row">
+                    <div class="col text-center">
+                        <h3 class="mt-5 mb-5">MÁS VENDIDOS</h3>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col ">
+                    <div class="row row-cols-1 row-cols-md-4 g-4">
+                        <div class="col">
+                            <div class="card h-100 d-flex justify-content-center align-items-center">
+                                <img src="../assets/img/img-6.jpg" class="card-img-top" alt="...">
+                                <div class="card-body">
+                                    <h5 class="card-title">Patricio Dress (Red)</h5>
+                                    <p class="card-text">$135.00</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div class="card h-100 d-flex justify-content-center align-items-center">
+                                <img src="../assets/img/img-7.jpg" class="card-img-top" alt="...">
+                                <div class="card-body">
+                                    <h5 class="card-title">Rocket Crop Lazuli</h5>
+                                    <p class="card-text">$218.00</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div class="card h-100 d-flex justify-content-center align-items-center">
+                                <img src="../assets/img/img-8.jpg" class="card-img-top" alt="...">
+                                <div class="card-body">
+                                    <h5 class="card-title">Murad Denim Coat</h5>
+                                    <p class="card-text">$99.99</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div class="card h-100 d-flex justify-content-center align-items-center">
+                                <img src="../assets/img/img-9.jpg" class="card-img-top" alt="...">
+                                <div class="card-body">
+                                    <h5 class="card-title">Mcculley Dress</h5>
+                                    <p class="card-text">$38.00</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+        <!-- fin main -->
+
+        <!-- footer -->
+        <footer class="footer mt-4">
+            <div class="row blog-header">
+                <div class="col-3">
+                    <h4 class="velaFooterTitle">
+                        Contacto
+                    </h4>
+                    <a class="navbar-brand d-flex justify-content-start align-items-start" href="#">
+                        <img src="../assets/img/JFOURJEANS-logo.png" class="logo" alt="">
+                    </a>
+                    <div class="velaContent">
+                        <div class="footerContactInfo">
+                            <div class="footerContactLine">
+                                JFOURJEANS
+                            </div>
+                            <div class="footerContactLine">
+                                +57 300 890 7890
+                            </div>
+                            <div class="footerContactLine">
+                                <a href="mailto:jfourjeans@gmail.com">jfourjeans@gmail.com</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-3">
+                    <h4 class="velaFooterTitle">Soporte</h4>
+                    <div class="velaContent">
+                        <ul class="velaFooterLinks list-unstyled">
+                            <li class="">
+                                <a href="#" title="">Términos y Condiciones</a>
+                            </li>
+
+                            <li class="">
+                                <a href="pages/public/faqs.html" title="">F.A.Qs</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-3">
+                    <h4 class="velaFooterTitle">Nosotros</h4>
+                    <div class="velaContent">
+                        <ul class="velaFooterLinks list-unstyled">
+                            <li class="">
+                                <a href="pages/public/#" title="">Sobre Nosotros</a>
+                            </li>
+
+                            <li class="">
+                                <a href="pages/public/contacto.html" title="">Contacto</a>
+                            </li>
+
+                            <li class="">
+                                <a href="index.html" title="">Tienda Oficial</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-3">
+                    <h4 class="velaFooterTitle">Cuenta</h4>
+                    <div class="velaContent">
+                        <ul class="velaFooterLinks list-unstyled">
+                            <li class="">
+                                <a href="pages/sign-up/inicio-sesion.html" title="">Iniciar Sesión</a>
+                            </li>
+
+                            <li class="">
+                                <a href="pages/sign-in/registro.html" title="">Registrar</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-12 d-flex justify-content-between pt-4">
+                    <div class="velaCopyRight">Copyright © 2021 JFOURJEANS. Reservados todos los Derechos</div>
+                    <div class="velaFooterSocial">
+                        <a class="link-secondary" href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a class="link-secondary" href="#"><i class="fab fa-twitter"></i></a>
+                        <a class="link-secondary" href="#"><i class="fab fa-instagram"></i></a>
+                        <a class="link-secondary" href="#"><i class="fab fa-pinterest"></i></a>
+                        <a class="link-secondary" href="#"><i class="fab fa-youtube"></i></a>
+                        <a class="link-secondary" href="#"><i class="fab fa-google-plus-g"></i></i></a>
+                    </div>
+                </div>
+            </div>
+        </footer>
+        <!-- fin footer -->
+    </div>
+
+    <!-- Bootstrap Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"
+        integrity="sha384-W8fXfP3gkOKtndU4JGtKDvXbO53Wy8SZCQHczT5FMiiqmQfUpWbYdTil/SxwZgAN" crossorigin="anonymous">
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.min.js"
+        integrity="sha384-skAcpIdS7UcVUC05LJ9Dxay8AXcDYfBJqt1CJ85S/CFujBsIzCIv+l9liuYLaMQ/" crossorigin="anonymous">
+    </script>
 </body>
-
-
-<!--Bootstrap Javascript-->
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js"
-    integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ"
-    crossorigin="anonymous"></script>
-<!--End Bootstrap Javascript -->
 
 </html>

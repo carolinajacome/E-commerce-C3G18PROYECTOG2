@@ -1,0 +1,45 @@
+.borde {
+  width: 50% !important;
+  border: 2px solid #e5e5e5;
+}
+
+form {
+  padding: 20px;
+}
+
+form div {
+  margin-top: 20px;
+}
+
+.form-group input {
+  width: 50%;
+}
+
+.form {
+  margin-left: 250px;
+}
+
+.button {
+  margin-left: 100px;
+}
+
+.btn {
+  background-color: #196b9c !important;
+  color: #fff !important;
+  height: 40px;
+  width: 150px;
+}
+
+.form a {
+  color: #196b9c;
+  text-decoration: none;
+}
+
+.form a:hover {
+  color: #196b9c;
+  text-decoration: underline;
+}
+
+hr {
+  width: 50%;
+}

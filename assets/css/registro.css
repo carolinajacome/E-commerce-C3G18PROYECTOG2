@@ -1,0 +1,244 @@
+body {
+  background-color: #f1f1f1;
+  font-family: "Poppins", sans-serif;
+}
+
+/* Características aplicadas a etiquetas header, navbar y footer relacionadas con Bootstrap */
+.contenedor {
+  margin: 10px;
+  display: grid;
+  gap: 10px;
+  grid-template-columns: repeat(4, minmax(100px, 1fr));
+  grid-template-rows: repeat(4, minmax(50px, auto));
+  grid-template-areas: "header header header header" "navbar navbar navbar navbar" "contenido contenido contenido contenido" "footer footer footer footer";
+}
+
+.contenedor .header {
+  width: 100%;
+  align-self: center;
+  justify-self: center;
+  grid-area: header;
+}
+
+.contenedor .navbar {
+  grid-area: navbar;
+}
+
+.contenedor .contenido {
+  grid-area: contenido;
+}
+
+.contenedor .footer {
+  grid-area: footer;
+  background: #196b9c;
+  color: #fff;
+  padding: 40px;
+}
+
+.logo {
+  height: 70px;
+  width: 150px;
+}
+
+.blog-header {
+  line-height: 1;
+  border-bottom: 1px solid #e5e5e5;
+}
+
+.blog-header-logo {
+  font-family: "Playfair Display", Georgia, "Times New Roman", serif;
+  font-size: 2.25rem;
+}
+
+.blog-header-logo:hover {
+  text-decoration: none;
+}
+
+.fas,
+.fab {
+  margin: 0 20px 0;
+}
+
+.link-secondary {
+  text-decoration: none;
+}
+
+.link-secondary:hover {
+  font-weight: bold;
+  transition: width 2s, height 4s;
+}
+
+.contenedor .footer a {
+  color: #fff;
+  text-decoration: none;
+  display: inline-block;
+  margin-bottom: 20px;
+}
+
+.contenedor .footer a:hover {
+  color: #fff;
+}
+
+h4 {
+  padding-top: 40px;
+  padding-bottom: 40px;
+}
+
+.footerContactLine {
+  padding-bottom: 20px;
+}
+
+/* Características aplicadas a etiquetas dentro del main */
+.section-wrap {
+  width: 100%;
+  max-width: 600px;
+  margin: 100px auto;
+  padding: 5px;
+  background-color: #E5E3E3;
+}
+
+.section-wrap .form-box {
+  background-color: #FFFFFF;
+  padding: 10px 10px 10px 10px;
+  font-size: 18px;
+}
+
+.section-wrap .form-box h1 {
+  text-align: center;
+  color: #234351;
+  margin-bottom: 10px;
+  padding: 15px 0 20px 0;
+  border-bottom: 1px solid rgba(0,0,0,.3);
+}
+
+.input-group,
+.input-checkbox {
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+.input-group input[type="password"],
+.input-group button[type="button"] {
+  display: inline-block;
+}
+
+.input-name,
+.input-last-name {
+  width: 50%;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="password"] {
+  border: 2px solid #E5E3E3;
+  padding: 5px 10px;
+  outline: none;
+  color: #234351;
+}
+
+.nombre {
+  width: 95%;
+}
+
+.apellido {
+  width: 100%;
+}
+
+input[type="email"] {
+  width: 100%;
+}
+
+button {
+  background: none;
+  border: none;
+}
+
+.input-group input[type="password"] {
+  width: 90%;
+  color: #234351;
+  border: 2px solid #E5E3E3;
+}
+
+.input-group button[type="button"] {
+  width: 10%;
+  color: #234351;
+  border: 2px solid #E5E3E3;
+}
+
+.input-checkbox input[type="checkbox"] {
+  margin: 0 5px 0 5px;
+}
+
+.button {
+  width: 100%;
+  max-width: 300px;
+  margin: auto;
+  padding-bottom: 10px;
+  text-align: center;
+}
+
+button[type="submit"] {
+  background: rgb(35, 67, 81);
+  position: relative;
+  color: #fff;
+  padding: 8px 22px;
+  cursor: pointer;
+  border: none;
+  border-radius: 15px;
+}
+
+  /* Clases para comprobación de campos y checkbox */
+.form-box__group_incorrect .nombre,
+.form-box__group_incorrect .apellido,
+.form-box__group_incorrect .email,
+.form-box__group_incorrect  input[type="password"] {
+  border: 2px solid #FF0000;
+  color: #FF0000;
+  transition-property: all 0.2s linear;
+}
+
+.form-box__group_correct .nombre,
+.form-box__group_correct .apellido,
+.form-box__group_correct .email,
+.form-box__group_correct input[type="password"] {
+  border: 2px solid #8AE600;
+  transition-property: all 0.2s linear;
+}
+
+.paragraph_input-error {
+  font-size: 13px;
+	margin-bottom: 20px;
+  padding-left: 10px;
+  display: none;
+}
+
+.paragraph_input-error-active {
+  color: #FF0000;
+	display: block;
+}
+
+.form__message {
+	height: 45px;
+	line-height: 45px;
+	background: #F66060;
+	padding: 0 15px;
+  margin-bottom: 20px;
+	border-radius: 3px;
+	display: none;
+}
+
+.form__message-active {
+	display: block;
+}
+
+.form__successful-message {
+	font-size: 14px;
+	color: #119200;
+  text-align: center;
+  margin-top: 10px;
+	display: none;
+}
+
+.form__successful-message-active {
+	display: block;
+}
