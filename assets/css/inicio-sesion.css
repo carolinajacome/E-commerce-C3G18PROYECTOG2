@@ -43,3 +43,7 @@ form div {
 hr {
   width: 50%;
 }
+
+.warnings {
+  font-weight: bold;
+}
