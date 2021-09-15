@@ -1,78 +1,49 @@
-body,
-html {
-    height: 100%;
+.borde {
+  width: 50% !important;
+  border: 2px solid #e5e5e5;
 }
 
-body {
-    margin: 0;
-    padding: 0;
-    background: #F1F1F1;
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: center;
+form {
+  padding: 20px;
+}
+
+form div {
+  margin-top: 20px;
+}
+
+.form-group input {
+  width: 50%;
+}
+
+.form {
+  margin-left: 250px;
+}
+
+.button {
+  margin-left: 100px;
+}
+
+.btn {
+  background-color: #196b9c !important;
+  color: #fff !important;
+  height: 40px;
+  width: 150px;
+}
+
+.form a {
+  color: #196b9c;
+  text-decoration: none;
+}
+
+.form a:hover {
+  color: #196b9c;
+  text-decoration: underline;
+}
+
+hr {
+  width: 50%;
 }
 
 .warnings {
-    width: 200px;
-    text-align: center;
-    margin: auto;
-    color: #234351;
-    padding-top: 15px;
-}
-
-.form-box {
-    width: 300px;
-    height: 300px;
-    padding: 40px;
-    border: 2px solid #234351;
-    background-color: #fffbfe;
-    text-align: center;
-}
-
-.form-title {
-    color: #234351;
-    text-transform: uppercase;
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-    font-style: normal;
-    font-weight: 400;
-}
-
-.form-box input[type="email"],
-.form-box input[type="password"],
-.form-box button[type="submit"] {
-    border: 0;
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-    background: none;
-    display: block;
-    margin: 20px auto;
-    padding: 14px 10px;
-    text-align: center;
-    border: 2px solid #234351;
-    width: 200px;
-    outline: none;
-    transition: 0.25s;
-}
-
-.form-box input[type="email"]:focus,
-.form-box input[type="password"]:focus {
-    width: 230px;
-    border: 2px solid #234351;
-}
-
-.form-box button[type="submit"] {
-    border: 2px solid #234351;
-    background: #234351;
-    cursor: pointer;
-}
-
-.form-box button[type="submit"]:hover {
-    background: none;
-}
-
-.container {
-    width: 85%;
-    max-width: auto;
-    margin: 0 auto;
+  font-weight: bold;
 }

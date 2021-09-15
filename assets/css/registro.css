@@ -3,119 +3,159 @@ body {
   font-family: "Poppins", sans-serif;
 }
 
-header {
-  display: fixed;
-  width: 100%;
-  margin: 20px 0px;
-}
-
-header nav {
-  width: 90%;
-  margin: auto;
-  padding: 20px;
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: space-between;
-}
-
-header a {
-  color: #234351;
-  text-decoration: none;
-}
-
-.log {
-  letter-spacing: 14px;
-}
-
-header nav ul {
-  list-style: none;
-}
-
-header nav ul li {
-  display: inline-block;
-  margin-right: 10px;
-}
-
-header nav ul li a {
-  padding: 5px;
-  transition: all 0.4s linear;
-  border-radius: 5px;
-}
-
-header nav ul li a:hover {
-  background-color: #ffffff;
-}
-
 .section-wrap {
   width: 100%;
-  max-width: 500px;
+  max-width: 600px;
   margin: 100px auto;
-  padding: 10px;
-  border-color: #000;
-  border-radius: 5px;
+  padding: 5px;
+  background-color: #e5e3e3;
 }
 
 .section-wrap .form-box {
-  background-color: #f0ecff;
-  border-radius: 10px;
-  padding: 0 20px 0 20px;
+  background-color: #ffffff;
+  padding: 10px 10px 10px 10px;
+  font-size: 18px;
 }
 
 .section-wrap .form-box h1 {
   text-align: center;
-  padding: 20px;
+  color: #234351;
   margin-bottom: 10px;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.3);
+}
+
+.group-form {
+  margin-top: 40px;
 }
 
 .input-group,
-.input-group-radio,
 .input-checkbox {
+  width: 100%;
   margin-bottom: 20px;
-  padding: 10px;
+}
+
+.input-group input[type="password"],
+.input-group button[type="button"] {
+  display: inline-block;
+}
+
+.input-name,
+.input-last-name {
+  width: 50%;
 }
 
 input[type="text"],
-input[type="password"],
-input[type="email"] {
-  width: 100%;
-  padding: 10px;
-  border: none;
-  border-bottom: 2px solid rgba(0, 0, 0, 0.7);
+input[type="email"],
+input[type="password"] {
+  border: 2px solid #e5e3e3;
+  padding: 5px 10px;
   outline: none;
-  background: none;
+  color: #234351;
 }
 
-.input-group-radio {
-  display: flex;
-  justify-content: space-between;
+.nombre {
+  width: 95%;
+}
+
+.apellido {
+  width: 100%;
+}
+
+input[type="email"] {
+  width: 100%;
+}
+
+button {
+  background: none;
+  border: none;
+}
+
+.input-group input[type="password"] {
+  width: 90%;
+  color: #234351;
+  border: 2px solid #e5e3e3;
+}
+
+.input-group button[type="button"] {
+  width: 10%;
+  color: #234351;
+  border: 2px solid #e5e3e3;
 }
 
 .input-checkbox input[type="checkbox"] {
-  margin-right: 5px;
+  margin: 0 5px 0 5px;
 }
 
 .button {
   width: 100%;
   max-width: 300px;
   margin: auto;
-  padding-bottom: 20px;
+  padding-bottom: 10px;
+  text-align: center;
 }
 
 button[type="submit"] {
-  background: rgba(194, 178, 255, 0.7);
-  display: inline-block;
+  background: rgb(35, 67, 81);
   position: relative;
-  left: 100px;
   color: #fff;
   padding: 8px 22px;
   cursor: pointer;
   border: none;
-  border-radius: 3px;
-  font-size: 16px;
+  border-radius: 15px;
 }
 
-button[type="submit"]:hover {
-  background: rgb(194, 178, 255);
-  transition: all 0.3s linear;
+/* Clases para comprobación de campos y checkbox */
+.form-box__group_incorrect .nombre,
+.form-box__group_incorrect .apellido,
+.form-box__group_incorrect .email,
+.form-box__group_incorrect input[type="password"] {
+  border: 2px solid #ff0000;
+  color: #ff0000;
+  transition-property: all 0.2s linear;
+}
+
+.form-box__group_correct .nombre,
+.form-box__group_correct .apellido,
+.form-box__group_correct .email,
+.form-box__group_correct input[type="password"] {
+  border: 2px solid #8ae600;
+  transition-property: all 0.2s linear;
+}
+
+.paragraph_input-error {
+  font-size: 13px;
+  margin-bottom: 20px;
+  padding-left: 10px;
+  display: none;
+}
+
+.paragraph_input-error-active {
+  color: #ff0000;
+  display: block;
+}
+
+.form__message {
+  height: 45px;
+  line-height: 45px;
+  background: #f66060;
+  padding: 0 15px;
+  margin-bottom: 20px;
+  border-radius: 3px;
+  display: none;
+}
+
+.form__message-active {
+  display: block;
+}
+
+.form__successful-message {
+  font-size: 14px;
+  color: #119200;
+  text-align: center;
+  margin-top: 10px;
+  display: none;
+}
+
+.form__successful-message-active {
+  display: block;
 }
