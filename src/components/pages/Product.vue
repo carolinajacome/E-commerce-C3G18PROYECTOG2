@@ -26,7 +26,7 @@
         <div class="col-md-7 col-sm-7 col-xs-12">
           <v-breadcrumbs class="pb-0" :items="breadcrums"></v-breadcrumbs>
           <div class="pl-6">
-            <p class="display-1 mb-0">Jean JFOUR REF218</p>
+            <p class="display-1 mb-0">Jean JFOUR REF2118</p>
             <v-card-actions class="pa-0">
               <p class="headline font-weight-light pt-3">$75.000 <del style="" class="subtitle-1 font-weight-thin">$85.000</del></p>
               <v-spacer></v-spacer>
@@ -126,7 +126,7 @@
             tile
             outlined
           >
-            <p class="subtitle-1 font-weight-light pt-3 text-center">YOU MIGHT ALSO LIKE</p>
+            <p class="subtitle-1 font-weight-light pt-3 text-center">TAMBIÉN TE PUEDE GUSTAR</p>
             <v-divider></v-divider>
             <div class="row text-center">
               <div class="col-md-2 col-sm-4 col-xs-12 text-center">
@@ -140,14 +140,14 @@
                     <v-img
                       class="white--text align-end"
                       height="200px"
-                     :src="require('../../assets/img/shop/5.jpg')"
+                     :src="require('../../assets/img/shop/8.jpg')"
                     >
-                      <v-card-title>Bags & Purses </v-card-title>
+                      <v-card-title>Shorts </v-card-title>
                     </v-img>
 
                     <v-card-text class="text--primary text-center">
-                      <div>Upto 60% + Extra 10%</div>
-                      <div>Baggit, Zara, Fossil</div>
+                      <div>Descuento 10% + Envío contraentrega</div>
+                      <div>J FOUR JEANS</div>
                     </v-card-text>
 
                     <div class="text-center">
@@ -173,14 +173,14 @@
                     <v-img
                       class="white--text align-end"
                       height="200px"
-                      :src="require('../../assets/img/shop/5.jpg')"
+                      :src="require('../../assets/img/shop/10.jpg')"
                     >
                       <v-card-title>T-Shirt </v-card-title>
                     </v-img>
 
                     <v-card-text class="text--primary text-center">
                       <div>Upto 50%</div>
-                      <div>Zara, Selected, Celio</div>
+                      <div>J FOUR JEANS</div>
                     </v-card-text>
 
                     <div class="text-center">
@@ -206,14 +206,14 @@
                     <v-img
                       class="white--text align-end"
                       height="200px"
-                      :src="require('../../assets/img/shop/5.jpg')"
+                      :src="require('../../assets/img/shop/2.jpg')"
                     >
                       <v-card-title>Jeans </v-card-title>
                     </v-img>
 
                     <v-card-text class="text--primary text-center">
-                      <div>Upto 60% + Extra 10%</div>
-                      <div>Jack & Jones, Levis</div>
+                      <div>Descuento 10% + Envío contraentrega</div>
+                      <div>J FOUR JEANS</div>
                     </v-card-text>
 
                     <div class="text-center">
@@ -239,14 +239,14 @@
                     <v-img
                       class="white--text align-end"
                       height="200px"
-                      :src="require('../../assets/img/shop/5.jpg')"
+                      :src="require('../../assets/img/shop/9.jpg')"
                     >
                       <v-card-title>Shirts </v-card-title>
                     </v-img>
 
                     <v-card-text class="text--primary text-center">
-                      <div>Upto 60% + Extra 10%</div>
-                      <div>Nike, Adidas, Puma</div>
+                      <div>Descuento 10% + Envío contraentrega</div>
+                      <div>J FOUR JEANS</div>
                     </v-card-text>
 
                     <div class="text-center">
@@ -272,14 +272,14 @@
                     <v-img
                       class="white--text align-end"
                       height="200px"
-                      :src="require('../../assets/img/home/deal4.jpg')"
+                      :src="require('../../assets/img/men/img-men.jpg')"
                     >
-                      <v-card-title>Shoes </v-card-title>
+                      <v-card-title>Caballero </v-card-title>
                     </v-img>
 
                     <v-card-text class="text--primary text-center">
-                      <div>Upto 60% + Extra 10%</div>
-                      <div>Nike, Adidas, Puma</div>
+                      <div>Descuento 10% + Envío contraentrega</div>
+                      <div>J FOUR JEANS</div>
                     </v-card-text>
 
                     <div class="text-center">
@@ -307,12 +307,12 @@
                       height="200px"
                       :src="require('../../assets/img/shop/3.jpg')"
                     >
-                      <v-card-title>Jackets </v-card-title>
+                      <v-card-title>Jeans </v-card-title>
                     </v-img>
 
                     <v-card-text class="text--primary text-center">
-                      <div>Upto 60% + Extra 10%</div>
-                      <div>Nike, Adidas, Puma</div>
+                      <div>Control abdomen</div>
+                      <div>J FOUR JEANS</div>
                     </v-card-text>
 
                     <div class="text-center">

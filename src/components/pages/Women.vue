@@ -36,7 +36,7 @@
             <v-divider></v-divider>
             
                 
-            <v-card-title class="pb-0">Size</v-card-title>
+            <v-card-title class="pb-0">Talla</v-card-title>
             <v-container class="pt-0" fluid>
               <v-checkbox  label="6" hide-details dense></v-checkbox>
               <v-checkbox  label="8" hide-details dense></v-checkbox>
@@ -51,7 +51,7 @@
 
          <v-divider></v-divider>
             
-              <v-card-title>Price</v-card-title>
+              <v-card-title>Precio</v-card-title>
                 <v-range-slider
                 v-model="range"
                 :max="max"
@@ -202,88 +202,89 @@
                     ],
                 }
             ],
-            products:[
+       products:[
                 {
                     id:1,
-                    name:'BLACK TEE',
-                    type:'Jackets',
-                    price:'18.00',
+                    name:'JEAN COMFORT LINE',
+                    type:'Jeans',
+                    price:'78.000',
                     src:require('../../assets/img/shop/1.jpg')
+                   
                 },
                 {
                     id:2,
-                    name:'WHITE TEE',
-                    type:'Polo',
-                    price:'40.00',
+                    name:'JEAN COMFORT LINE',
+                    type:'Jeans',
+                    price:'90.000',
                     src:require('../../assets/img/shop/2.jpg')
                 },
                 {
                     id:3,
-                    name:'Zara limited...',
-                    type:'Denim',
-                    price:'25.00',
+                    name:'JEAN SKINNY SMALL',
+                    type:'Jeans',
+                    price:'75.000',
                     src:require('../../assets/img/shop/3.jpg')
                 },
                 {
                     id:4,
-                    name:'SKULL TEE',
-                    type:'Jackets',
-                    price:'30.00',
+                    name:'JEAN TOTAL CONTROL',
+                    type:'Jeans',
+                    price:'70.000',
                     src:require('../../assets/img/shop/4.jpg')
                 },
                 {
                     id:5,
-                    name:'MANGO WINTER',
-                    type:'Sweaters',
-                    price:'50.00',
+                    name:'SHORT NAVY',
+                    type:'Short',
+                    price:'50.000',
                     src:require('../../assets/img/shop/5.jpg')
                 },
                 {
                     id:6,
-                    name:'SHIRT',
-                    type:'Denim',
-                    price:'34.00',
+                    name:'SHORT BABY BLUE',
+                    type:'Short',
+                    price:'64.000',
                     src:require('../../assets/img/shop/6.jpg')
                 },
                 {
                     id:7,
-                    name:'TRUCKER JACKET',
-                    type:'Jackets',
-                    price:'38.00',
+                    name:'SHORT BABY BLUE ROTOS',
+                    type:'Short',
+                    price:'78.000',
                     src:require('../../assets/img/shop/7.jpg')
                 },
                 {
                     id:8,
-                    name:'COATS',
-                    type:'Jackets',
-                    price:'25.00',
+                    name:'SHORT SPORT',
+                    type:'Short',
+                    price:'78.000',
                     src:require('../../assets/img/shop/8.jpg')
                 },{
                     id:9,
-                    name:'MANGO WINTER',
-                    type:'Sweaters',
-                    price:'50.00',
+                    name:'POMPOSA',
+                    type:'Blusa',
+                    price:'50.000',
                     src:require('../../assets/img/shop/9.jpg')
                 },
                 {
                     id:10,
-                    name:'SHIRT',
-                    type:'Denim',
-                    price:'34.00',
+                    name:'CAMISA AZUL BABY BLUE',
+                    type:'Blusa',
+                    price:'34.000',
                     src:require('../../assets/img/shop/10.jpg')
                 },
                 {
                     id:11,
-                    name:'TRUCKER JACKET',
-                    type:'Jackets',
-                    price:'38.00',
+                    name:'BAMBA',
+                    type:'Blusa',
+                    price:'58.000',
                     src:require('../../assets/img/shop/11.jpg')
                 },
                 {
                     id:12,
-                    name:'COATS',
-                    type:'Jackets',
-                    price:'25.00',
+                    name:'FANTASY',
+                    type:'Blusa',
+                    price:'55.000',
                     src:require('../../assets/img/shop/12.jpg')
                 }
             ]
