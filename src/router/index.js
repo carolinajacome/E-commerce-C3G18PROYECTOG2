@@ -17,7 +17,7 @@ import OurPolicy from "@/components/pages/OurPolicy";
 import Terms from "@/components/pages/Terms&Conditions";
 import Shipping from "@/components/pages/Shipping&Return";
 import Faq from "@/components/pages/FAQs";
-import NotFound from "@/components/not-found/404-Page";
+import NotFound from "@/components/not-found/NotFound";
 
 Vue.use(Router);
 
@@ -28,7 +28,7 @@ export default new Router({
       component: Layout,
       children: [
         {
-          path: "/home",
+          path: "/",
           name: "Home",
           component: Home
         },
