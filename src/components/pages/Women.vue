@@ -160,14 +160,14 @@
 <script>
     export default {
         data: () => ({
-            range: [0, 10000],
-            select:'Popularity',
+            range: [0, 100000],
+            select:'Talla',
             options: [
                 'Default',
-                'Popularity',
-                'Relevance',
-                'Price: Low to High',
-                'Price: High to Low',
+                'Talla',
+                'Color',
+                'Precio: Menor a mayor',
+                'Precio: Mayor a menor',
             ],
             page:1,
             breadcrums: [
