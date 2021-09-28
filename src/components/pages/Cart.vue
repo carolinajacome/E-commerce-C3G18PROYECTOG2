@@ -1,17 +1,17 @@
 <template>
   <div>
     <v-container class="contenedor">
-      <p class="display-3 font-weight-light	text-center pa-4">SHOPPING CART</p>
+      <p class="display-3 font-weight-light	text-center pa-4">Carrito de Compra</p>
       <v-row>
         <v-col :cols="12" md="9" sm="12">
           <v-simple-table>
             <template v-slot:default>
               <thead>
                 <tr>
-                  <th class="text-center">ITEM</th>
-                  <th class="text-center">PRICE</th>
-                  <th class="text-center">QUANTITY</th>
-                  <th class="text-center">TOTAL</th>
+                  <th class="text-center">Producto</th>
+                  <th class="text-center">Precio</th>
+                  <th class="text-center">Cantidad</th>
+                  <th class="text-center">Total</th>
                   <th class="text-center"></th>
                 </tr>
               </thead>

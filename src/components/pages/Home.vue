@@ -6,7 +6,8 @@
       >
         <v-row class="fill-height" align="center" justify="center">
           <div class="display-2 white--text pl-5 pr-5 hidden-sm-only">
-            <strong>Upto 60% + Extra 10%</strong>
+          
+            <v-btn href="/women" class="white--text--left" outlined><strong>NUEVA COLECCIÓN </strong> </v-btn>
           </div>
           <br />
         </v-row>
@@ -14,7 +15,8 @@
       <v-carousel-item :src="require('../../assets/images/home/carousel/slider-2.jpg')">
         <v-row class="fill-height" align="center" justify="center">
           <div class="display-2 white--text pl-5 pr-5 hidden-sm-only">
-            <strong>Upto 60% + Extra 10%</strong>
+            <strong>NUEVA COLECCIÓN</strong>
+           
           </div>
           <br />
         </v-row>
@@ -22,7 +24,7 @@
       <v-carousel-item :src="require('../../assets/images/home/carousel/slider-3.jpg')">
         <v-row class="fill-height" align="center" justify="center">
           <div class="display-2 white--text pl-5 pr-5 hidden-sm-only">
-            <strong>Upto 60% + Extra 10%</strong>
+            <strong>NUEVA COLECCIÓN</strong>
           </div>
           <br />
         </v-row>
@@ -30,7 +32,7 @@
       <v-carousel-item :src="require('../../assets/images/home/carousel/slider-4.jpg')">
         <v-row class="fill-height" align="center" justify="center">
           <div class="display-2 white--text pl-5 pr-5 hidden-sm-only">
-            <strong>Upto 60% + Extra 10%</strong>
+            <strong>NUEVA COLECCIÓN</strong>
           </div>
           <br />
         </v-row>
@@ -45,9 +47,9 @@
             gradient="to bottom, rgba(0,0,0,.1), rgba(0,0,0,.5)"
             height="400px"
           >
-            <h1 class="text-center font-size">Top Picks</h1>
+            <h1 class="text-center font-size">Mujer</h1>
             <div class="text-center">
-              <v-btn href="/women" class="white--text " outlined>SHOP NOW</v-btn>
+              <v-btn href="/women" class="white--text " outlined>Compra ahora</v-btn>
             </div>
           </v-img>
         </v-card>
@@ -60,9 +62,9 @@
             gradient="to bottom, rgba(0,0,0,.1), rgba(0,0,0,.5)"
             height="400px"
           >
-            <h1 class="text-center font-size">New Arrivals</h1>
+            <h1 class="text-center font-size">Hombre</h1>
             <div class="text-center">
-              <v-btn href="/men" class="white--text" outlined>SHOP NOW</v-btn>
+              <v-btn href="/men" class="white--text" outlined>Compra ahora</v-btn>
             </div>
           </v-img>
         </v-card>
@@ -72,7 +74,7 @@
       <v-row no-gutters>
         <v-col :cols="12">
           <v-card-text class="" tile outlined>
-            <v-card-title class="subheading ">Deals of the Day</v-card-title>
+            <v-card-title class="subheading ">PROMO DEL DÍA</v-card-title>
             <v-divider></v-divider>
             <div class="row">
               <div class="col-12 col-md-3 col-sm-6 col-xs-6 text-center">
@@ -81,19 +83,19 @@
                     <v-img
                       class="white--text align-end"
                       height="200px"
-                      :src="require('../../assets/images/home/cards/img-6.jpg')"
+                      :src="require('../../assets/images/women/1.jpg')"
                     >
-                      <v-card-title>Bags & Purses </v-card-title>
+                    <v-card-title>Jeans dama </v-card-title>
                     </v-img>
 
                     <v-card-text class="text--primary text-center">
-                      <div>Upto 60% + Extra 10%</div>
-                      <div>Baggit, Zara, Fossil</div>
+                      <div>NUEVA COLECCIÓN DAMA</div>
+                      <div>$50.000</div>
                     </v-card-text>
 
                     <div class="text-center">
                       <v-btn href="/promotions" class="ma-2" outlined color="info">
-                        Explore
+                        OBTÉN LA PROMO
                       </v-btn>
                     </div>
                   </v-card>
@@ -105,19 +107,19 @@
                     <v-img
                       class="white--text align-end"
                       height="200px"
-                      :src="require('../../assets/images/home/cards/img-7.jpg')"
+                      :src="require('../../assets/images/women/12.jpg')"
                     >
-                      <v-card-title>T-Shirt </v-card-title>
+                      <v-card-title>Blusas </v-card-title>
                     </v-img>
 
                     <v-card-text class="text--primary text-center">
-                      <div>Upto 50%</div>
-                      <div>Zara, Selected, Celio</div>
+                      <div>Descuento del 30%</div>
+                      <div>$35.000</div>
                     </v-card-text>
 
                     <div class="text-center">
                       <v-btn href="/promotions" class="ma-2" outlined color="info">
-                        Explore
+                        OBTÉN LA PROMO
                       </v-btn>
                     </div>
                   </v-card>
@@ -129,19 +131,19 @@
                     <v-img
                       class="white--text align-end"
                       height="200px"
-                      :src="require('../../assets/images/home/cards/img-8.jpg')"
+                      :src="require('../../assets/images/men/1.jpg')"
                     >
                       <v-card-title>Jeans </v-card-title>
                     </v-img>
 
                     <v-card-text class="text--primary text-center">
-                      <div>Upto 60% + Extra 10%</div>
-                      <div>Jack & Jones, Levis</div>
+                      <div>Jean Clásico Caballero</div>
+                      <div>$76.000</div>
                     </v-card-text>
 
                     <div class="text-center">
                       <v-btn href="/promotions" class="ma-2" outlined color="info">
-                        Explore
+                        OBTÉN LA PROMO
                       </v-btn>
                     </div>
                   </v-card>
@@ -153,19 +155,19 @@
                     <v-img
                       class="white--text align-end"
                       height="200px"
-                      :src="require('../../assets/images/home/cards/img-9.jpg')"
+                      :src="require('../../assets/images/men/11.jpg')"
                     >
-                      <v-card-title>Shoes </v-card-title>
+                      <v-card-title>Camisas </v-card-title>
                     </v-img>
 
                     <v-card-text class="text--primary text-center">
-                      <div>Upto 60% + Extra 10%</div>
-                      <div>Nike, Adidas, Puma</div>
+                      <div>Manga Larga </div>
+                      <div>$59.999</div>
                     </v-card-text>
 
                     <div class="text-center">
                       <v-btn href="/promotions" class="ma-2" outlined color="info">
-                        Explore
+                        OBTÉN LA PROMO
                       </v-btn>
                     </div>
                   </v-card>
