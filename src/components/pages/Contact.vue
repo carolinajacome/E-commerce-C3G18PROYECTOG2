@@ -12,9 +12,9 @@
           <v-row no-gutters>
             <v-col :key="n" cols="6" sm="6" class="d-flex pa-2">
               <span class="group pa-2">
-                <v-icon>home</v-icon>
-                <v-icon>event</v-icon>
-                <v-icon>info</v-icon>
+                <v-icon>Deseo</v-icon>
+                <v-icon>información</v-icon>
+                <v-icon>sobre... </v-icon>
               </span>
             </v-col>
             <v-col :key="n" cols="6" sm="6">

@@ -4,7 +4,7 @@
       <v-carousel-item :src="require('../../assets/images/home/carousel/slider-4.jpg')">
         <v-row class="fill-height" align="center" justify="center">
           <div class="display-2 white--text pl-5 pr-5 hidden-sm-only">
-            <strong>Upto 60% + Extra 10%</strong>
+            <strong>Encuentra novedades cada semana</strong>
           </div>
           <br />
         </v-row>
@@ -12,23 +12,16 @@
       <v-carousel-item :src="require('../../assets/images/home/carousel/slider-2.jpg')">
         <v-row class="fill-height" align="center" justify="center">
           <div class="display-2 white--text pl-5 pr-5 hidden-sm-only">
-            <strong>Upto 60% + Extra 10%</strong>
+            <strong> </strong>
           </div>
           <br />
         </v-row>
       </v-carousel-item>
-      <v-carousel-item :src="require('../../assets/images/home/carousel/slider-3.jpg')">
-        <v-row class="fill-height" align="center" justify="center">
-          <div class="display-2 white--text pl-5 pr-5 hidden-sm-only">
-            <strong>Upto 60% + Extra 10%</strong>
-          </div>
-          <br />
-        </v-row>
-      </v-carousel-item>
+      
       <v-carousel-item :src="require('../../assets/images/home/carousel/slider-1.jpg')">
         <v-row class="fill-height" align="center" justify="center">
           <div class="display-2 white--text pl-5 pr-5 hidden-sm-only">
-            <strong>Upto 60% + Extra 10%</strong>
+            <strong> </strong>
           </div>
           <br />
         </v-row>
@@ -36,8 +29,7 @@
     </v-carousel>
     <v-container>
       <p class="display-3 font-weight-light	text-center pa-4">
-        Read About Fashion
-      </p>
+Aprende sobre moda      </p>
       <div class="row">
         <div class="col-md-4 col-sm-4 col-xs-12">
           <v-card class="mx-auto" max-width="400" outlined tile href="/post">
@@ -46,7 +38,7 @@
               height="400px"
               :src="require('../../assets/images/blog/img-10.jpg')"
             >
-              <v-card-title>Top 10 Fashion of the Week</v-card-title>
+              <v-card-title>Tendencias 2022</v-card-title>
             </v-img>
 
             <v-card-subtitle class="pb-0">Lorem ipsum</v-card-subtitle>
@@ -74,7 +66,7 @@
               height="400px"
               :src="require('../../assets/images/blog/img-11.jpg')"
             >
-              <v-card-title>Best brands for fashion</v-card-title>
+              <v-card-title>¿Por qué te gustan tanto de las marcas de alta costura?</v-card-title>
             </v-img>
 
             <v-card-subtitle class="pb-0">Lorem ipsum</v-card-subtitle>
@@ -102,7 +94,7 @@
               height="400px"
               :src="require('../../assets/images/blog/img-12.jpg')"
             >
-              <v-card-title>Fashion Tips & Tricks</v-card-title>
+              <v-card-title>Trucos de moda</v-card-title>
             </v-img>
 
             <v-card-subtitle class="pb-0">Lorem ipsum</v-card-subtitle>
@@ -130,7 +122,7 @@
               height="400px"
               :src="require('../../assets/images/blog/img-13.jpg')"
             >
-              <v-card-title>Top 10 Fashion of the Week</v-card-title>
+              <v-card-title>Las 10 tendencias en moda de esta temporada</v-card-title>
             </v-img>
 
             <v-card-subtitle class="pb-0">Lorem ipsum</v-card-subtitle>

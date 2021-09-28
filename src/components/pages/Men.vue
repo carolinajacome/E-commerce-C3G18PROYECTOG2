@@ -18,12 +18,12 @@
               ></v-treeview>
             </template>
             <v-divider></v-divider>
-            <v-card-title class="pb-0">Mark</v-card-title>
+            <v-card-title class="pb-0">Marca</v-card-title>
             <v-container class="pt-0" fluid>
-              <v-checkbox label="Carrel" hide-details dense></v-checkbox>
-              <v-checkbox label="Color Siete" hide-details dense></v-checkbox>
-              <v-checkbox label="Levis" hide-details dense></v-checkbox>
-              <v-checkbox label="Polo" hide-details dense></v-checkbox>
+              <v-checkbox label="J FOUR" hide-details dense></v-checkbox>
+              <v-checkbox label="STOPEL" hide-details dense></v-checkbox>
+              <v-checkbox label="D-SEAL" hide-details dense></v-checkbox>
+              <v-checkbox label="Industry" hide-details dense></v-checkbox>
             </v-container>
             <v-divider></v-divider>
             <v-card-title class="pb-0">Color</v-card-title>
@@ -34,7 +34,7 @@
               <v-checkbox label="Red" hide-details dense></v-checkbox>
             </v-container>
             <v-divider></v-divider>
-            <v-card-title class="pb-0">Size</v-card-title>
+            <v-card-title class="pb-0">Talla</v-card-title>
             <v-container class="pt-0" fluid>
               <v-checkbox label="XS" hide-details dense></v-checkbox>
               <v-checkbox label="S" hide-details dense></v-checkbox>
@@ -42,7 +42,7 @@
               <v-checkbox label="L" hide-details dense></v-checkbox>
             </v-container>
             <v-divider></v-divider>
-            <v-card-title>Price</v-card-title>
+            <v-card-title>Precio</v-card-title>
             <v-range-slider
               v-model="range"
               :max="max"
@@ -196,94 +196,94 @@ export default {
         id: 1,
         name: "Clothing",
         children: [
-          { id: 1, name: "Shirts" },
+          { id: 1, name: "Jeans" },
           { id: 2, name: "Bermuda" },
-          { id: 3, name: "Jeans" },
+          { id: 3, name: "Camisa" },
         ],
       },
     ],
     products: [
       {
         id: 1,
-        name: "BLACK TEE",
-        type: "Jackets",
+        name: "Jean oscuro",
+        type: "Jean",
         price: "18.00",
         src: require("../../assets/images/men/1.jpg"),
       },
       {
         id: 2,
-        name: "WHITE TEE",
-        type: "Polo",
+        name: "Jean Hielo",
+        type: "Jean",
         price: "40.00",
         src: require("../../assets/images/men/2.jpg"),
       },
       {
         id: 3,
-        name: "Zara limited...",
-        type: "Denim",
+        name: "Denim",
+        type: "Jean",
         price: "25.00",
         src: require("../../assets/images/men/3.jpg"),
       },
       {
         id: 4,
-        name: "SKULL TEE",
-        type: "Jackets",
+        name: "Jean negro",
+        type: "Jean",
         price: "30.00",
         src: require("../../assets/images/men/4.jpg"),
       },
       {
         id: 5,
         name: "MANGO WINTER",
-        type: "Sweaters",
+        type: "Bermuda",
         price: "50.00",
         src: require("../../assets/images/men/5.jpg"),
       },
       {
         id: 6,
         name: "SHIRT",
-        type: "Denim",
+        type: "Bermuda",
         price: "34.00",
         src: require("../../assets/images/men/6.jpg"),
       },
       {
         id: 7,
         name: "TRUCKER JACKET",
-        type: "Jackets",
+        type: "Bermuda",
         price: "38.00",
         src: require("../../assets/images/men/7.jpg"),
       },
       {
         id: 8,
         name: "COATS",
-        type: "Jackets",
+        type: "Bermuda",
         price: "25.00",
         src: require("../../assets/images/men/8.jpg"),
       },
       {
         id: 9,
         name: "MANGO WINTER",
-        type: "Sweaters",
+        type: "Camisa",
         price: "50.00",
         src: require("../../assets/images/men/9.jpg"),
       },
       {
         id: 10,
         name: "SHIRT",
-        type: "Denim",
+        type: "Camisa",
         price: "34.00",
         src: require("../../assets/images/men/10.jpg"),
       },
       {
         id: 11,
         name: "TRUCKER JACKET",
-        type: "Jackets",
+        type: "Camisa",
         price: "38.00",
         src: require("../../assets/images/men/11.jpg"),
       },
       {
         id: 12,
         name: "COATS",
-        type: "Jackets",
+        type: "Camisa",
         price: "25.00",
         src: require("../../assets/images/men/12.jpg"),
       },
