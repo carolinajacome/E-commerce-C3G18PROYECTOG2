@@ -52,22 +52,6 @@
 
     <v-footer :padless="true">
       <v-card flat tile width="100%" class="secondary white--text text-center">
-        <v-card-text>
-          <v-btn class="mx-4 white--text" icon>
-            <v-icon size="24px">mdi-home</v-icon>
-          </v-btn>
-          <v-btn class="mx-4 white--text" icon>
-            <v-icon size="24px">mdi-email</v-icon>
-          </v-btn>
-          <v-btn class="mx-4 white--text" icon>
-            <v-icon size="24px">mdi-calendar</v-icon>
-          </v-btn>
-          <v-btn class="mx-4 white--text" icon>
-            <v-icon size="24px">mdi-delete</v-icon>
-          </v-btn>
-        </v-card-text>
-
-
      
     
       <a href="/quienes-somos"  class="white--text pt-0" style="text-decoration: none">
