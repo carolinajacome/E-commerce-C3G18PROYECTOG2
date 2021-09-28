@@ -23,7 +23,7 @@
                   v-model="name"
                   :counter="10"
                   :rules="nameRules"
-                  label="Name"
+                  label="Nombre"
                   required
                 ></v-text-field>
                 <v-text-field
@@ -35,7 +35,7 @@
                 <v-textarea
                   v-model="message"
                   :rules="messageRules"
-                  label="Message"
+                  label="Mensaje"
                   required
                 ></v-textarea>
                 <v-btn
@@ -43,9 +43,9 @@
                   color="primary"
                   class="mr-4"
                   @click="validate"
-                  >Submit</v-btn
+                  >Enviar</v-btn
                 >
-                <v-btn color="error" class="mr-4" @click="reset">Reset</v-btn>
+                <v-btn color="error" class="mr-4" @click="reset">Limpiar</v-btn>
               </v-form>
             </v-col>
           </v-row>
