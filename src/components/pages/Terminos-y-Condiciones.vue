@@ -20,11 +20,7 @@
       <div class="row">
         <div class="col-md-12 col-sm-12 col-xs-1">
           <v-card class="mx-auto" max-width="1200" >
-            
-
-           
-
-            <v-card-text class="text--primary">
+          <v-card-text class="text--primary">
               <div>
                 J FOUR JEANS dispone este sitio para dar un mejor servicio a sus clientes. Por favor lee las siguientes normas que rigen el uso de jfourjeans.com, el cual aceptas al acceder a él. Si no estás de acuerdo, por favor no lo uses. Nos reservamos el derecho a actualizar o cambiar los Términos y Condiciones en cualquier momento sin previo aviso, es por esto que te recomendamos leer esta sección cada vez que vayas a usar este sitio.
 

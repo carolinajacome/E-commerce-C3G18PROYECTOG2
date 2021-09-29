@@ -10,7 +10,7 @@
           <v-img
             class="white--text align-end"
             height="400px"
-            :src="require('../../assets/images/blog/img-10.jpg')"
+            :src="require('../../assets/blog/img-10.jpg')"
           ></v-img>
           <p class="display-1 mb-0 pt-5">Lorem ipsum</p>
           <p class="pt-5 subtitle-1 font-weight-light">

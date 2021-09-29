@@ -53,20 +53,23 @@
     <v-footer :padless="true">
       <v-card flat tile width="100%" class="secondary white--text text-center">
      
-    
+      <v-row>
       <a href="/quienes-somos"  class="white--text pt-0" style="text-decoration: none">
-          <p> Nosotros </p>
+           <p class="mt-2 ml-5 "  >Nosotros </p>
         </a>
-    
+    </v-row>
         
+        <v-row>
       <a href="/Terminos-y-Condiciones"  class="white--text pt-0" style="text-decoration: none">
-          <p> Términos y Condiciones</p>
+           <p class="ml-5" > Términos y Condiciones </p>
         </a>
-        
+        </v-row>
+
+         <v-row> 
       <a href="/Politica-tratamiento-datos"  class="white--text align-end" style="text-decoration: none" >
-          <p> Política de Tratamiento de datos personales </p>
+        <p class="ml-5" >Política de Tratamiento de datos personales </p>
         </a>
-              
+       </v-row>   
     
 
      <v-divider color="#fff"></v-divider>

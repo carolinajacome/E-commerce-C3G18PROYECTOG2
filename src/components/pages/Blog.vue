@@ -36,7 +36,7 @@ Aprende sobre moda      </p>
             <v-img
               class="white--text align-end"
               height="400px"
-              :src="require('../../assets/images/blog/img-10.jpg')"
+              :src="require('../../assets/blog/img-10.jpg')"
             >
               <v-card-title>Tendencias 2022</v-card-title>
             </v-img>
@@ -64,7 +64,7 @@ Aprende sobre moda      </p>
             <v-img
               class="white--text align-end"
               height="400px"
-              :src="require('../../assets/images/blog/img-11.jpg')"
+              :src="require('../../assets/blog/img-11.jpg')"
             >
               <v-card-title>¿Por qué te gustan tanto de las marcas de alta costura?</v-card-title>
             </v-img>
@@ -92,7 +92,7 @@ Aprende sobre moda      </p>
             <v-img
               class="white--text align-end"
               height="400px"
-              :src="require('../../assets/images/blog/img-12.jpg')"
+              :src="require('../../assets/blog/img-12.jpg')"
             >
               <v-card-title>Trucos de moda</v-card-title>
             </v-img>
@@ -120,7 +120,7 @@ Aprende sobre moda      </p>
             <v-img
               class="white--text align-end"
               height="400px"
-              :src="require('../../assets/images/blog/img-13.jpg')"
+              :src="require('../../assets/blog/img-13.jpg')"
             >
               <v-card-title>Las 10 tendencias en moda de esta temporada</v-card-title>
             </v-img>
@@ -148,7 +148,7 @@ Aprende sobre moda      </p>
             <v-img
               class="white--text align-end"
               height="400px"
-              :src="require('../../assets/images/blog/img-14.jpg')"
+              :src="require('../../assets/blog/img-14.jpg')"
             >
               <v-card-title>Top 10 Fashion of the Week</v-card-title>
             </v-img>
@@ -176,7 +176,7 @@ Aprende sobre moda      </p>
             <v-img
               class="white--text align-end"
               height="400px"
-              :src="require('../../assets/images/blog/img-15.jpg')"
+              :src="require('../../assets/blog/img-15.jpg')"
             >
               <v-card-title>Top 10 Fashion of the Week</v-card-title>
             </v-img>
