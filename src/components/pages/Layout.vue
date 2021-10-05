@@ -29,59 +29,57 @@
     <v-content>
       <v-bottom-navigation :value="value" color="primary" horizontal>
         <v-btn href="/">
-          <span>Home</span>
+          <span>Inicio</span>
         </v-btn>
         <v-btn href="/women">
-          <span>Women</span>
+          <span>Mujer</span>
         </v-btn>
         <v-btn href="/men">
-          <span>Men</span>
+          <span>Hombre</span>
         </v-btn>
         <v-btn href="/promotions">
-          <span>Promotions</span>
+          <span>Promociones</span>
         </v-btn>
         <v-btn href="/blog">
           <span>Blog</span>
         </v-btn>
         <v-btn href="/contact-us">
-          <span>Contact</span>
+          <span>Contacto</span>
         </v-btn>
       </v-bottom-navigation>
     </v-content>
     <router-view />
+
     <v-footer :padless="true">
       <v-card flat tile width="100%" class="secondary white--text text-center">
-        <v-card-text>
-          <v-btn class="mx-4 white--text" icon>
-            <v-icon size="24px">mdi-home</v-icon>
-          </v-btn>
-          <v-btn class="mx-4 white--text" icon>
-            <v-icon size="24px">mdi-email</v-icon>
-          </v-btn>
-          <v-btn class="mx-4 white--text" icon>
-            <v-icon size="24px">mdi-calendar</v-icon>
-          </v-btn>
-          <v-btn class="mx-4 white--text" icon>
-            <v-icon size="24px">mdi-delete</v-icon>
-          </v-btn>
-        </v-card-text>
+     
+      <v-row>
+      <a href="/quienes-somos"  class="white--text pt-0" style="text-decoration: none">
+           <p class="mt-2 ml-5 "  >Nosotros </p>
+        </a>
+    </v-row>
+        
+        <v-row>
+      <a href="/Terminos-y-Condiciones"  class="white--text pt-0" style="text-decoration: none">
+           <p class="ml-5" > Términos y Condiciones </p>
+        </a>
+        </v-row>
 
-        <v-card-text class="white--text pt-0">
-          Phasellus feugiat arcu sapien, et iaculis ipsum elementum sit amet.
-          Mauris cursus commodo interdum. Praesent ut risus eget metus luctus
-          accumsan id ultrices nunc. Sed at orci sed massa consectetur dignissim
-          a sit amet dui. Duis commodo vitae velit et faucibus. Morbi vehicula
-          lacinia malesuada. Nulla placerat augue vel ipsum ultrices, cursus
-          iaculis dui sollicitudin. Vestibulum eu ipsum vel diam elementum
-          tempor vel ut orci. Orci varius natoque penatibus et magnis dis
-          parturient montes, nascetur ridiculus mus.
-        </v-card-text>
+         <v-row> 
+      <a href="/Politica-tratamiento-datos"  class="white--text align-end" style="text-decoration: none" >
+        <p class="ml-5" >Política de Tratamiento de datos personales </p>
+        </a>
+       </v-row>   
+    
 
-        <v-divider color="#fff"></v-divider>
+     <v-divider color="#fff"></v-divider>
 
+     
+     
+       
         <v-card-text class="white--text">
           Copyright &copy; {{ new Date().getFullYear() }} —
-          <strong>JFOURJEANS</strong>. All Rights Reserved
+          <strong>JFOURJEANS</strong>. Todos los derechos reservados
         </v-card-text>
       </v-card>
     </v-footer>
