@@ -9,15 +9,15 @@ import Promotions from "@/components/pages/Promotions";
 import Blog from "@/components/pages/Blog";
 import Post from "@/components/pages/Post";
 import Cart from "@/components/pages/Cart";
-import About from "@/components/pages/About";
+import About from "@/components/pages/Quienes-Somos";
 import Contact from "@/components/pages/Contact";
 import Login from "@/components/sign-up/Login";
 import Register from "@/components/sign-in/Register";
-import OurPolicy from "@/components/pages/OurPolicy";
-import Terms from "@/components/pages/Terms&Conditions";
+import OurPolicy from "@/components/pages/Politica-tratamiento-datos";
+import Terms from "@/components/pages/Terminos-y-Condiciones";
 import Shipping from "@/components/pages/Shipping&Return";
 import Faq from "@/components/pages/FAQs";
-import NotFound from "@/components/not-found/404-Page";
+import NotFound from "@/components/not-found/NotFound";
 
 Vue.use(Router);
 
@@ -28,13 +28,13 @@ export default new Router({
       component: Layout,
       children: [
         {
-          path: "/home",
+          path: "/",
           name: "Home",
           component: Home
         },
         {
-          path: "/about-us",
-          name: "About",
+          path: "/Quienes-Somos",
+          name: "Quienes-Somos",
           component: About
         },
         {
@@ -88,13 +88,13 @@ export default new Router({
           component: Register
         },
         {
-          path: "/our-policy",
+          path: "/Politica-tratamiento-datos",
           name: "OurPolicy",
           component: OurPolicy
         },
         {
-          path: "/terms-conditions",
-          name: "Terms&Conditions",
+          path: "/Terminos-y-Condiciones",
+          name: "Terminos-y-Condiciones",
           component: Terms
         },
         {

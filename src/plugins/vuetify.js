@@ -1,13 +1,9 @@
-// src/plugins/vuetify.js
-
 import Vue from "vue";
-import Vuetify from "vuetify";
-import "vuetify/dist/vuetify.min.css";
-import colors from "vuetify/lib/util/colors";
+import Vuetify from "vuetify/lib/framework";
 
 Vue.use(Vuetify);
 
-const opts = {
+export default new Vuetify({
   theme: {
     themes: {
       light: {
@@ -19,10 +15,9 @@ const opts = {
         success: "#7a904a",
         warning: "#f78012",
         grey: "#6c757d",
-        white: "#fff"
-      }
-    }
-  }
-};
-
-export default new Vuetify(opts);
+        white: "#fff",
+        white2: "#ffffff"
+      },
+    },
+  },
+});
