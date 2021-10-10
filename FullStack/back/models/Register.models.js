@@ -1,7 +1,6 @@
 const mongoose = require("mongoose");
 
 const registerSchema = mongoose.Schema({
-    id: String,
     firstName: String,
     lastName: String,
     email: String,

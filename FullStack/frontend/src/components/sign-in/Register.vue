@@ -62,12 +62,7 @@
         ></v-text-field>
 
         <v-btn
-          rounded
-          large
-          :disabled="!valid"
-          color="primary"
-          class="mr-4"
-          @click="validate"
+          @click:append="registerUser() && validate()" 
         >
           Crear cuenta
         </v-btn>
@@ -77,6 +72,7 @@
 </template>
 
 <script>
+import {createUser} from "../../controllers/Register.contr";
 export default {
   data: () => ({
     valid: true,
@@ -103,20 +99,33 @@ export default {
     password: "",
     rules: {
       required: (value) => !!value || "Requerido.",
-      min: (v) => v.length >= 16 || "Mínimo 16 caracteres",
+      min: (v) => v.length >= 8 || "Mínimo 8 caracteres",
     },
     show2: false,
     password2: "",
     rules2: {
       required: (value) => !!value || "Requerido.",
-      min: (v) => v.length >= 16 || "Mínimo 16 caracteres",
-    },
+      min: (v) => v.length >= 8 || "Mínimo 8 caracteres",
+    }
   }),
 
   methods: {
+    registerUser(){
+      const user = {
+        firstName: this.name,
+        lastName: this.last_name,
+        email: this.email,
+        password: this.password
+      };
+      createUser(user)
+      .then(() =>{
+        console.log("Registrado correctamente")
+      })
+      .catch((err) => console.error(err));
+    },
     validate() {
       this.$refs.form.validate();
-    },
+    }
   },
 };
 </script>
