@@ -10,9 +10,7 @@ app.use(express.json()); // Toda la comunicación establecida se hacer por medio
 app.use(express.urlencoded({ extended: true })); // Enviar datos por url para interpretación
 
 // Definir rutas
-app.get("/", (req, res) => {
-    res.status(200).json({ 'message': 'Hola a todos' })
-})
+app.use("/api", require("./routes/routes"));
 
 // Iniciar servidor
 const port = process.env.PORT;
