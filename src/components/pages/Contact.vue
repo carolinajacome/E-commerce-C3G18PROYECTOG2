@@ -12,9 +12,9 @@
           <v-row no-gutters>
             <v-col :key="n" cols="6" sm="6" class="d-flex pa-2">
               <span class="group pa-2">
-                <v-icon>Deseo</v-icon>
-                <v-icon>información</v-icon>
-                <v-icon>sobre... </v-icon>
+                <v-icon>Deseo </v-icon>
+                <v-icon>información </v-icon>
+                <v-icon> sobre... </v-icon>
               </span>
             </v-col>
             <v-col :key="n" cols="6" sm="6">
@@ -27,8 +27,8 @@
                 <v-text-field
                   type="text"
                   id="name"
-                  name="name"
-                  placeholder="Name"
+                  name="Nombre"
+                  placeholder="Nombre"
                   v-model="name"
                   :counter="10"
                   :rules="nameRules"
@@ -119,18 +119,18 @@ export default {
     valid: true,
     name: "",
     nameRules: [
-      (v) => !!v || "Name is required",
-      (v) => (v && v.length <= 10) || "Name must be less than 10 characters",
+      (v) => !!v || "El campo nombre es obligatorio",
+      (v) => (v && v.length >= 3 ) || "El nombre debe ser mayor de 3 carácteres",
     ],
     email: "",
     emailRules: [
       (v) => !!v || "E-mail is required",
-      (v) => /.+@.+\..+/.test(v) || "E-mail must be valid",
+      (v) => /.+@.+\..+/.test(v) || "E-mail debe ser un mail válido",
     ],
     message: "",
     messageRules: [
       (v) => !!v || "Message is required",
-      (v) => (v && v.length >= 10) || "Message must be more than 10 characters",
+      (v) => (v && v.length >= 10) || "El mensaje debe ser mayor a 10 carácteres",
     ],
   }),
   methods: {
