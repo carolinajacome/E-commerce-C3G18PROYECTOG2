@@ -20,7 +20,7 @@ import Faq from "@/components/pages/FAQs";
 import NotFound from "@/components/not-found/NotFound";
 import Dashboard from "@/components/dashboard/Dashboard";
 import ProductList from "@/components/dashboard/ProductList";
-
+import NuevoProducto from "@/components/dashboard/ProductNew";
 Vue.use(Router);
 
 export default new Router({
@@ -53,6 +53,12 @@ export default new Router({
           path: "/product",
           name: "Product",
           component: Product
+        },
+
+        {
+          path: "/ProductNew",
+          name: "NuevoProducto",
+          component: NuevoProducto
         },
         {
           path: "/promotions",

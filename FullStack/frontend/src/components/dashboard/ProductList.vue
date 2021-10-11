@@ -1,14 +1,18 @@
 <template>
-  <div class="products">
-    <h1>Lista de productos</h1>
+
+ <div class="products">
+
+
+
+  <h1>Lista de productos</h1>
+  <v-btn color="primary" to= "/ProductNew"> Nuevo Producto</v-btn>
 
     <v-container>
       <v-row>
         
-          
             <v-col
               v-for="product in products"
-              :key="product.name"
+              :key="product.code"
               md="4"
               sm="6"
               cols="12"
