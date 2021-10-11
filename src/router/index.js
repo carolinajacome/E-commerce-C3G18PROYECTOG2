@@ -10,6 +10,9 @@ import Blog from "@/components/pages/Blog";
 import Post from "@/components/pages/Post";
 import Cart from "@/components/pages/Cart";
 import About from "@/components/pages/Quienes-Somos";
+
+import Dashboard from "@/components/dashboard/Dashboard";
+
 import Contact from "@/components/pages/Contact";
 import Login from "@/components/sign-up/Login";
 import Register from "@/components/sign-in/Register";
@@ -81,6 +84,11 @@ export default new Router({
           path: "/login",
           name: "Login",
           component: Login
+        },
+        {
+          path: "/dashboard",
+          name: "Dashboard",
+          component: Dashboard
         },
         {
           path: "/register",

@@ -18,6 +18,7 @@ import Terms from "@/components/pages/Terminos-y-Condiciones";
 import Shipping from "@/components/pages/Shipping&Return";
 import Faq from "@/components/pages/FAQs";
 import NotFound from "@/components/not-found/NotFound";
+import Dashboard from "@/components/dashboard/Dashboard";
 
 Vue.use(Router);
 
@@ -81,6 +82,12 @@ export default new Router({
           path: "/login",
           name: "Login",
           component: Login
+        },
+
+        {
+          path: "/dashboard",
+          name: "Dashboard",
+          component: Dashboard
         },
         {
           path: "/register",
