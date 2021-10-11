@@ -19,6 +19,7 @@ import Shipping from "@/components/pages/Shipping&Return";
 import Faq from "@/components/pages/FAQs";
 import NotFound from "@/components/not-found/NotFound";
 import Dashboard from "@/components/dashboard/Dashboard";
+import ProductList from "@/components/dashboard/ProductList";
 
 Vue.use(Router);
 
@@ -88,6 +89,11 @@ export default new Router({
           path: "/dashboard",
           name: "Dashboard",
           component: Dashboard
+        },
+        {
+          path: "/ProductList",
+          name: "ProductList",
+          component: ProductList
         },
         {
           path: "/register",
