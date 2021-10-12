@@ -20,7 +20,7 @@
           <v-btn href="/login" icon>
             <v-icon>mdi-account-circle</v-icon>
           </v-btn>
-          <v-btn v-on="on" href="/cart" icon>
+          <v-btn  href="/cart" icon>
             <v-badge content="2" value="2" color="primary" overlap>
               <v-icon>mdi-cart</v-icon>
             </v-badge>
@@ -29,7 +29,7 @@
       </v-toolbar-title>
     </v-app-bar>
 
-    <v-content>
+    <v-main>
       <v-bottom-navigation :value="value" color="primary" horizontal>
         <v-btn href="/">
           <span>Inicio</span>
@@ -50,7 +50,7 @@
           <span>Contacto</span>
         </v-btn>
       </v-bottom-navigation>
-    </v-content>
+    </v-main>
 
     <router-view />
 

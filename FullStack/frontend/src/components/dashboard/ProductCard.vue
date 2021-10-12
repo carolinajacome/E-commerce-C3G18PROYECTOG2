@@ -1,12 +1,10 @@
 <template>
   <v-card>
-    <v-img
-      :src="imageUrl"
-    ></v-img>
+    <v-img :aspect-ratio="16 / 9" :src="imageUrl"></v-img>
     <v-card-title>{{ item.item }}</v-card-title>
     <v-card-subtitle><b>Precio:</b> {{ item.price }}</v-card-subtitle>
-     <v-card-subtitle><b>Id:</b> {{ item.id }}</v-card-subtitle>
-       <v-card-subtitle><b>Marca: </b> {{ item.mark }}</v-card-subtitle>
+    <v-card-subtitle><b>Id:</b> {{ item.id }}</v-card-subtitle>
+    <v-card-subtitle><b>Marca: </b> {{ item.mark }}</v-card-subtitle>
     <div class="categories">
       <v-chip v-for="category in item.categories" :key="category">{{
         category
@@ -20,7 +18,7 @@
   </v-card>
 </template>
 
-<script>
+<script lang="js">
 import { deleteProduct } from "../../controllers/ProductController";
 
 export default {
@@ -39,9 +37,9 @@ export default {
   },
   computed: {
     imageUrl() {
-      return this.item.imageUrl == undefined
+      return this.item.path_image == undefined
         ? "https://isocarp.org/app/uploads/2014/05/noimage.jpg"
-        : this.item.imageUrl;
+        : require(`../../assets/images/${this.item.path_image}`);
     },
   },
 };
