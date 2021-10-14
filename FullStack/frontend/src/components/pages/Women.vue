@@ -109,7 +109,7 @@
               :key="p.id"
               v-for="p in products"
             >
-              <div v-if="p.category.name === 'Women'">
+              <div v-if="p.category.name === 'Woman'">
                 <v-hover v-slot:default="{ hover }">
                   <v-card
                     class="mx-auto"
