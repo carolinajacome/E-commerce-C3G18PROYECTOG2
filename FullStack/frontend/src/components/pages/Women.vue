@@ -106,40 +106,48 @@
           <div class="row text-center">
             <div
               class="col-md-3 col-sm-6 col-xs-12"
-              :key="pro.id"
-              v-for="pro in products"
+              :key="p.id"
+              v-for="p in products"
             >
-              <v-hover v-slot:default="{ hover }">
-                <v-card class="mx-auto" color="grey lighten-4" max-width="600">
-                  <v-img
-                    class="white--text align-end"
-                    :aspect-ratio="16 / 9"
-                    height="200px"
-                    :src="pro.src"
+              <div v-if="p.category.name !== ''">
+                <v-hover v-slot:default="{ hover }">
+                  <v-card
+                    class="mx-auto"
+                    color="grey lighten-4"
+                    max-width="600"
                   >
-                    <v-card-title>{{ pro.type }} </v-card-title>
-                    <v-expand-transition>
-                      <div
-                        v-if="hover"
-                        class="d-flex transition-fast-in-fast-out white darken-2 v-card--reveal display-3 white--text"
-                        style="height: 100%;"
-                      >
-                        <v-btn v-if="hover" href="/product" class="" outlined
-                          >VIEW</v-btn
+                    <v-img
+                      class="white--text align-end"
+                      :aspect-ratio="16 / 9"
+                      height="200px"
+                      :src="require(`../../assets/images/${p.path_image}`)"
+                    >
+                      <v-card-title>{{
+                        p.category.subcategory[0].name
+                      }}</v-card-title>
+                      <v-expand-transition>
+                        <div
+                          v-if="hover"
+                          class="d-flex transition-fast-in-fast-out white darken-2 v-card--reveal display-3 white--text"
+                          style="height: 100%;"
                         >
+                          <v-btn v-if="hover" href="/product" class="" outlined
+                            >VIEW</v-btn
+                          >
+                        </div>
+                      </v-expand-transition>
+                    </v-img>
+                    <v-card-text class="text--primary">
+                      <div>
+                        <a href="/product" style="text-decoration: none">{{
+                          p.item
+                        }}</a>
                       </div>
-                    </v-expand-transition>
-                  </v-img>
-                  <v-card-text class="text--primary">
-                    <div>
-                      <a href="/product" style="text-decoration: none">{{
-                        pro.name
-                      }}</a>
-                    </div>
-                    <div>${{ pro.price }}</div>
-                  </v-card-text>
-                </v-card>
-              </v-hover>
+                      <div>${{ p.price }}</div>
+                    </v-card-text>
+                  </v-card>
+                </v-hover>
+              </div>
             </div>
           </div>
           <div class="text-center mt-12">
@@ -150,6 +158,7 @@
     </v-container>
   </div>
 </template>
+
 <style>
 .v-card--reveal {
   align-items: center;
@@ -160,7 +169,10 @@
   width: 100%;
 }
 </style>
+
 <script>
+import { getAllProducts } from "../../controllers/ProductController";
+
 export default {
   data: () => ({
     range: [0, 100000],
@@ -203,92 +215,14 @@ export default {
         ],
       },
     ],
-    products: [
-      {
-        id: 1,
-        name: "JEAN COMFORT LINE",
-        type: "Jeans",
-        price: "78.000",
-        src: require("../../assets/images/women/1.jpg"),
-      },
-      {
-        id: 2,
-        name: "JEAN COMFORT LINE",
-        type: "Jeans",
-        price: "90.000",
-        src: require("../../assets/images/women/2.jpg"),
-      },
-      {
-        id: 3,
-        name: "JEAN SKINNY SMALL",
-        type: "Jeans",
-        price: "75.000",
-        src: require("../../assets/images/women/3.jpg"),
-      },
-      {
-        id: 4,
-        name: "JEAN TOTAL CONTROL",
-        type: "Jeans",
-        price: "70.000",
-        src: require("../../assets/images/women/4.jpg"),
-      },
-      {
-        id: 5,
-        name: "SHORT NAVY",
-        type: "Short",
-        price: "50.000",
-        src: require("../../assets/images/women/5.jpg"),
-      },
-      {
-        id: 6,
-        name: "SHORT BABY BLUE",
-        type: "Short",
-        price: "64.000",
-        src: require("../../assets/images/women/6.jpg"),
-      },
-      {
-        id: 7,
-        name: "SHORT BABY BLUE ROTOS",
-        type: "Short",
-        price: "78.000",
-        src: require("../../assets/images/women/7.jpg"),
-      },
-      {
-        id: 8,
-        name: "SHORT SPORT",
-        type: "Short",
-        price: "78.000",
-        src: require("../../assets/images/women/8.jpg"),
-      },
-      {
-        id: 9,
-        name: "POMPOSA",
-        type: "Blusa",
-        price: "50.000",
-        src: require("../../assets/images/women/9.jpg"),
-      },
-      {
-        id: 10,
-        name: "CAMISA AZUL BABY BLUE",
-        type: "Blusa",
-        price: "34.000",
-        src: require("../../assets/images/women/10.jpg"),
-      },
-      {
-        id: 11,
-        name: "BAMBA",
-        type: "Blusa",
-        price: "58.000",
-        src: require("../../assets/images/women/11.jpg"),
-      },
-      {
-        id: 12,
-        name: "FANTASY",
-        type: "Blusa",
-        price: "55.000",
-        src: require("../../assets/images/women/12.jpg"),
-      },
-    ],
+    products: [],
   }),
+  mounted() {
+    getAllProducts()
+      .then((response) => {
+        this.products = response.data;
+      })
+      .catch((err) => console.error(err.response.data.message));
+  },
 };
 </script>
