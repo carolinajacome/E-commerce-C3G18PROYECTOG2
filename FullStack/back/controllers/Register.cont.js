@@ -14,9 +14,25 @@ module.exports = class registerController {
     static async getAll(req, res) {
         try {
             const registers = await registerModel.find();
-            res.status(201).json(registers);
+            res.status(200).json(registers);
         } catch (error) {
             res.status(400).json({ message: error.message })
         }
     }
+
+    static async getByEmail(req, res) {
+        try {
+            const email = req.params.email;
+            const register = await registerModel.findOne({ "email": email });
+            if (register == null) {
+                res.status(404).json({ message: 'No encontrado' })
+            } else {
+                res.status(200).json(register);
+            }
+        } catch (error) {
+            res.status(404).json({ message: error.message })
+        }
+    }
+
 }
+

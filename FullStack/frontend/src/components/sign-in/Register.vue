@@ -37,7 +37,7 @@
           class="password"
           v-model="password"
           :append-icon="show1 ? 'mdi-eye' : 'mdi-eye-off'"
-          :rules="[rules.required, rules.min]"
+          :rules="passwordRules"
           :type="show1 ? 'text' : 'password'"
           name="input-10-1"
           label="Contraseña"
@@ -48,7 +48,7 @@
           class="password2"
           v-model="password2"
           :append-icon="show2 ? 'mdi-eye' : 'mdi-eye-off'"
-          :rules="[rules2.required, rules2.min]"
+          :rules="password2Rules"
           :type="show2 ? 'text' : 'password'"
           name="input-10-1"
           label="Confirmar contraseña"
@@ -103,16 +103,16 @@ export default {
     ],
     show1: false,
     password: "",
-    rules: {
-      required: (value) => !!value || "Requerido.",
-      min: (v) => v.length >= 8 || "Mínimo 8 caracteres"
-    },
+    passwordRules: [
+      (value) => !!value || "Requerido",
+      (v) => v.length >= 8 || "Mínimo 8 caracteres"
+    ],
     show2: false,
     password2: "",
-    rules2: {
-      required: (value) => !!value || "Requerido.",
-      min: (v) => v.length >= 8 || "Mínimo 8 caracteres"
-    },
+    password2Rules: [
+      (value) => !!value || "Requerido",
+      (v) => v.length >= 8 || "Mínimo 8 caracteres"
+    ],
   }),
   methods: {
     registerUser() {

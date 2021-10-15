@@ -21,7 +21,7 @@
                 ></v-text-field>
                 <v-text-field
                   v-model="contraseña"
-                  :rules="passRules"
+                  :rules="contraseñaRules"
                   label="Contraseña"
                   required
                   :append-icon="show1 ? 'eye' : 'eye-off'"
@@ -35,12 +35,14 @@
                   :disabled="!valid"
                   color="success"
                   class="mr-4"
-                  @click="validate"
+                  @click="validate()"
                 >
                   Iniciar sesion
                 </v-btn>
               </v-col>
-              <div class="container">¿No posees una cuenta? <a href="/register">¡Regístrate!</a></div>
+              <div class="container">
+                ¿No posees una cuenta? <a href="/register">¡Regístrate!</a>
+              </div>
             </v-row>
           </v-form>
         </v-card-text>
@@ -50,24 +52,36 @@
 </template>
 
 <script>
+import { getEmail } from "../../controllers/Register.contr";
+
 export default {
   data: () => ({
     valid: true,
     email: "",
     emailRules: [
       (v) => !!v || "E-mail requerido",
-      (v) => /.+@.+\..+/.test(v) || "E-mail must be valid",
+      (v) => /.+@.+\..+/.test(v) || "El E-mail debe ser válido",
     ],
     contraseña: "",
-    passRules: [
+    contraseñaRules: [
       (v) => !!v || "Contraseña requerida",
-      (v) => (v && v.length >= 8) || "Min 8 caracteres",
+      (v) => (v && v.length >= 8) || "Mínimo 8 caracteres",
     ],
   }),
 
   methods: {
+    validarDatos() {
+      const email = this.email;
+      getEmail(email)
+        .then((response) => {
+          console.log(response);
+        })
+        .catch((error) => console.error(error));
+    },
     validate() {
-      this.$refs.form.validate();
+      if (this.$refs.form.validate() === true) {
+        this.validarDatos();
+      }
     },
   },
 };
