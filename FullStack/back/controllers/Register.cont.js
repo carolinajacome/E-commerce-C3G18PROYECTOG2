@@ -10,4 +10,13 @@ module.exports = class registerController {
             res.status(400).json({ message: error.message })
         }
     }
+
+    static async getAll(req, res) {
+        try {
+            const registers = await registerModel.find();
+            res.status(201).json(registers);
+        } catch (error) {
+            res.status(400).json({ message: error.message })
+        }
+    }
 }

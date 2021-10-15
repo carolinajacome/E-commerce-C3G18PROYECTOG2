@@ -12,7 +12,6 @@
         <v-text-field
           class="name"
           v-model="name"
-          :counter="16"
           :rules="nameRules"
           label="Nombre(s)"
           required
@@ -21,7 +20,6 @@
         <v-text-field
           class="last_name"
           v-model="last_name"
-          :counter="16"
           :rules="last_nameRules"
           label="Apellido(s)"
           required
@@ -43,8 +41,6 @@
           :type="show1 ? 'text' : 'password'"
           name="input-10-1"
           label="Contraseña"
-          hint="At least 8 characters"
-          counter
           @click:append="show1 = !show1"
         ></v-text-field>
 
@@ -56,13 +52,22 @@
           :type="show2 ? 'text' : 'password'"
           name="input-10-1"
           label="Confirmar contraseña"
-          hint="At least 8 characters"
-          counter
           @click:append="show2 = !show2"
         ></v-text-field>
 
+        <v-checkbox
+          v-model="checkbox"
+          class="checkbox"
+          :rules="[(v) => !!v || '¡Debe aceptar para continuar!']"
+          label="Acepto las políticas de tratamiento de datos y los términos y condiciones"
+          required
+        ></v-checkbox>
+
         <v-btn
-          @click:append="registerUser() && validate()" 
+          :disabled="!valid"
+          color="primary"
+          class="mr-4"
+          @click="validate()"
         >
           Crear cuenta
         </v-btn>
@@ -72,9 +77,10 @@
 </template>
 
 <script>
-import {createUser} from "../../controllers/Register.contr";
+import { createUser } from "../../controllers/Register.contr";
 export default {
   data: () => ({
+    checkbox: false,
     valid: true,
     name: "",
     nameRules: [
@@ -99,33 +105,43 @@ export default {
     password: "",
     rules: {
       required: (value) => !!value || "Requerido.",
-      min: (v) => v.length >= 8 || "Mínimo 8 caracteres",
+      min: (v) => v.length >= 8 || "Mínimo 8 caracteres"
     },
     show2: false,
     password2: "",
     rules2: {
       required: (value) => !!value || "Requerido.",
-      min: (v) => v.length >= 8 || "Mínimo 8 caracteres",
-    }
+      min: (v) => v.length >= 8 || "Mínimo 8 caracteres"
+    },
   }),
-
   methods: {
-    registerUser(){
+    registerUser() {
       const user = {
         firstName: this.name,
         lastName: this.last_name,
         email: this.email,
-        password: this.password
+        password: this.password,
+        rol: {
+          name: 'user'
+        }
       };
       createUser(user)
-      .then(() =>{
-        console.log("Registrado correctamente")
-      })
-      .catch((err) => console.error(err));
+        .then(() => {
+          console.log("Registrado correctamente");
+          console.log(this.name, this.last_name, this.email, this.password);
+        })
+        .catch((err) => console.error(err));
     },
     validate() {
-      this.$refs.form.validate();
-    }
+      if (this.$refs.form.validate() === true) {
+        if (this.password != this.password2) {
+          alert("Las contraseñas no coinciden");
+        } else {
+          this.registerUser();
+          this.$refs.form.reset();
+        }
+      }
+    },
   },
 };
 </script>
@@ -139,6 +155,7 @@ export default {
 
 .conten {
   margin-top: 100px;
+  margin-bottom: 100px;
   width: 600px !important;
   padding: 30px !important;
   border: 2px solid #234351;
@@ -154,7 +171,11 @@ export default {
   margin-bottom: 15px;
 }
 
+.checkbox {
+  margin: 15px 0px 15px 0px;
+}
+
 .mr-4 {
-  margin: 5px 0 10px 0;
+  margin: 10px 0 10px 0;
 }
 </style>

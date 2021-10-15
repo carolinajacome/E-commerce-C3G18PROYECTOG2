@@ -40,6 +40,7 @@
                   Iniciar sesion
                 </v-btn>
               </v-col>
+              <div class="container">¿No posees una cuenta? <a href="/register">¡Regístrate!</a></div>
             </v-row>
           </v-form>
         </v-card-text>
@@ -82,6 +83,7 @@ export default {
   width: 600px;
   height: 360px;
   padding: 15px;
+  margin-top: 100px;
   border: 2px solid #234351;
   background-color: #fffbfe;
   justify-content: center;

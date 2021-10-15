@@ -18,6 +18,9 @@ router.put("/products/:id", productController.update);
 router.delete("/products/:id", productController.delete);
 
 //Register routes
-router.post("/register", registerController.create);
+router.post("/registers", registerController.create);
+router.get("/registers", registerController.getAll); //Para hacer pruebas y verificar si se realizaron lso registros.
+
+//Users routes
 
 module.exports = router;
