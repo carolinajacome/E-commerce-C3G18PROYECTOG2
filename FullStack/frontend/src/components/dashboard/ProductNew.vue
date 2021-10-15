@@ -1,131 +1,204 @@
 <template>
-  <div class="new-product">
-    <h1>{{ isNew ? "Nuevo" : "Editar" }} Producto</h1>
-    <div v-if="!changeImage">
-      <v-img v-if="!isNew" :src="imageUrl"></v-img>
-      <v-file-input
-        v-if="isNew"
-        accept="image/*"
-        label="Imagen"
-        v-model="image"
-        :rules="imageRules"
-      ></v-file-input>
-      <v-text-field
-        label="Código"
-        v-model="code"
-        prepend-icon="mdi-code-tags"
-      ></v-text-field>
-      <v-text-field
-        label="Nombre"
-        v-model="name"
-        prepend-icon="mdi-account"
-      ></v-text-field>
-      <v-text-field
-        label="Precio"
-        v-model="price"
-        prepend-icon="mdi-currency-usd"
-      ></v-text-field>
-      <v-combobox
-        prepend-icon="mdi-shape"
-        v-model="categories"
-        chips
-        clearable
-        label="Categorias"
-        multiple
-        solo
-      >
-        <template v-slot:selection="{ attrs, item, select, selected }">
-          <v-chip
-            v-bind="attrs"
-            :input-value="selected"
-            close
-            @click="select"
-            @click:close="removeChip(item)"
-          >
-            {{ item }}
-          </v-chip>
-        </template>
-      </v-combobox>
+  <v-main>
+    <header-app />
+    <div>
+      <v-container class="container">
+        <h1>{{ isNew ? "Agregar un Nuevo" : "Editar" }} Producto</h1>
+        <br />
+        <v-row>
+          <v-col cols="12" sm="6">
+            <v-text-field
+              label="Id:"
+              type="number"
+              hide-details="auto"
+              v-model="id"
+              :rules="numberRules"
+            >
+              <v-icon slot="prepend" color="#dc3545"> mdi-numeric </v-icon>
+            </v-text-field>
+          </v-col>
 
+          <v-col cols="12" sm="6">
+            <v-text-field
+              label="Nombre:"
+              :rules="nameRules"
+              hide-details="auto"
+              v-model="name"
+            >
+              <v-icon slot="prepend" color="#dc3545">
+                mdi-package-variant
+              </v-icon>
+            </v-text-field>
+          </v-col>
+
+          <v-col cols="12" sm="6">
+            <v-text-field
+              label="Descripción:"
+              :rules="nameRules"
+              hide-details="auto"
+              v-model="description"
+            >
+            <v-icon slot="prepend" color="#dc3545"> mdi-pen </v-icon>
+            </v-text-field>
+          </v-col>
+
+          <v-col cols="12" sm="6">
+            <v-text-field
+              label="Cantidad:"
+              type="number"
+              hide-details="auto"
+              v-model="stock"
+              :rules="numberRules"
+            >
+              <v-icon slot="prepend" color="#dc3545"> mdi-numeric </v-icon>
+            </v-text-field>
+          </v-col>
+
+          <v-col cols="12" sm="6">
+            <v-text-field
+              label="Precio :"
+              type="number"
+              hide-details="auto"
+              v-model="price"
+              :rules="numberRules"
+            >
+              <v-icon slot="prepend" color="#dc3545"> mdi-cash </v-icon>
+            </v-text-field>
+          </v-col>
+          
+          <v-col cols="12" sm="6">
+                <v-select
+                :items="itemsC"
+                label="Marca"
+                solo
+                
+              >
+              <v-icon slot="prepend" color="#dc3545">
+                mdi-checkbox-multiple-blank
+            
+              </v-icon>
+         </v-select>
+            <v-text-field
+              label="Categoría:"
+              :rules="nameRules"
+              hide-details="auto"
+              v-model="category"
+            >
+             
+              <v-icon slot="prepend" color="#dc3545">
+                mdi-checkbox-multiple-blank
+            
+              </v-icon>
+             
+              
+            </v-text-field>
+          </v-col>
+
+          <v-col cols="12" sm="6">
+            <v-img max-heigth="300" :src="img"></v-img>
+            <v-text-field label="URL de la imagen" v-model="img">
+              <v-icon slot="prepend" color="#dc3545"> mdi-image</v-icon>
+            </v-text-field>
+          </v-col>
+          
+         
+        </v-row>
+      </v-container>
       <div class="botones">
-        <v-btn color="primary" @click="guardarProducto()" v-if="isNew"
-          >Guardar</v-btn
+        <v-btn
+          tile
+          class="rounded-pill"
+          style="margin-right: 10px"
+          dark
+          color="#E65245"
+          link
+          href="/productlist"
         >
-        <v-btn color="warning" @click="changeImage = true" v-if="!isNew"
-          >Actualizar imagen</v-btn
-        >
-        <v-btn color="success" @click="actualizarProducto()" v-if="!isNew"
-          >Actualizar</v-btn
-        >
-      </div>
-    </div>
-    <div v-if="changeImage">
-      <v-file-input
-        accept="image/*"
-        label="Image"
-        v-model="image"
-        :rules="imageRules"
-      ></v-file-input>
-      <div class="botones">
-        <v-btn color="success" @click="cambiarImagen()"
-          >Actualizar imagen</v-btn
-        >
-      </div>
-    </div>
-
-    <v-snackbar v-model="snackbar">
-      {{ snackbarText }}
-
-      <template v-slot:action="{ attrs }">
-        <v-btn color="pink" text v-bind="attrs" @click="closeConfirmation()">
-          Close
+          <v-icon left wh> mdi-close-thick </v-icon>
+          Cancelar
         </v-btn>
-      </template>
-    </v-snackbar>
-  </div>
+
+        <v-btn
+          tile
+          class="rounded-pill"
+          dark
+          color="#196b9c"
+          @click="guardar()"
+          v-if="isNew"
+        >
+          <v-icon left> mdi-note-check </v-icon>
+          Guardar
+        </v-btn>
+
+        <v-btn
+          tile
+          dark
+          class="rounded-pill"
+          color="#dc3545"
+          @click="actualizar()"
+          v-if="!isNew"
+        >
+          <v-icon left> mdi-account-check </v-icon>
+          Actualizar
+        </v-btn>
+      </div>
+      <v-snackbar v-model="snackbar">
+        {{ snackbarText }}
+        <template v-slot:action="{ attrs }">
+          <v-btn color="blue" text v-bind="attrs" @click="closeConfirmation()">
+            Cerrar
+          </v-btn>
+        </template>
+      </v-snackbar>
+      <br /><br /><br /><br />
+    </div>
+  </v-main>
 </template>
 
 <script>
-import {
-  createProduct,
-  createProductWithImage,
-  getProduct,
-  updateProduct,
-  updateProductImage,
-} from "../../controllers/ProductController";
 
+import {
+  getProduct,
+  createProduct,
+  updateProduct,
+} from "../../controllers/ProductController";
 export default {
+  
   data() {
     return {
-      image: null,
-      code: 0,
-      name: "",
-      price: 0,
+      id: "",
+      item: "",
+      description: "",
+      stock: "",
+      price: "",
       categories: [],
-      imageUrl: "",
+      path_image: "",
+      itemsC: ['J FOUR ', 'D-SEAL', 'STOPEL'],
       snackbar: false,
       snackbarText: "",
       isNew: true,
-      imageRules: [
-        (value) =>
-          !value ||
-          value.size < 2000000 ||
-          "Avatar size should be less than 2 MB!",
+      nameRules: [
+        (value) => !!value || "Campo Requerido.",
+        (value) => (value && value.length >= 3) || "Min 3 caracteres",
       ],
-      changeImage: false,
+      numberRules: [(value) => !!value || "Campo Requerido."],
     };
   },
+
   created() {
-    const code = this.$route.params.code;
-    if (code != undefined) {
-      getProduct(code)
+    const id = this.$route.params.id;
+    if (id != undefined) {
+      getProduct(id)
         .then((response) => {
           const product = response.data;
-          this.code = product.code;
-          this.name = product.name;
+          this.id = product.id;
+          this.item = product.item;
+          this.description = product.description;
+          this.stock = product.stock;
           this.price = product.price;
-          this.categories = product.categories;
-          this.imageUrl = product.imageUrl;
+          this.category = product.category;
+          this.path_image = product.path_image;
+         
 
           this.isNew = false;
         })
@@ -133,79 +206,60 @@ export default {
     }
   },
   methods: {
-    guardarProducto() {
-      let request = null;
-      if (this.image == null || this.image == undefined) {
-        const product = {
-          code: this.code,
-          name: this.name,
-          price: this.price,
-          categories: this.categories,
-        };
-
-        request = createProduct(product);
-      } else {
-        const product = new FormData();
-        product.append("code", this.code);
-        product.append("name", this.name);
-        product.append("price", this.price);
-        product.append("categories", JSON.stringify(this.categories));
-        product.append("image", this.image);
-
-        request = createProductWithImage(product);
-      }
-
-      request
+    guardar() {
+       const product = {
+        id: this.id,
+        item: this.item,
+        description: this.description,
+        stock: this.stock,
+        price: this.price,      
+        category: this.category,
+        mark: this.mark,
+        path_image: this.path_image,
+      };
+      createProduct(product)
         .then(() => {
-          this.openSuccessDialog("Guardado correctamente");
+          this.openSuccesDialog("Guardado correctamente");
         })
         .catch((err) => console.error(err));
     },
-    actualizarProducto() {
+
+
+    actualizar() {
       if (
-        this.code == undefined ||
-        this.code == "" ||
-        this.name == undefined ||
-        this.name == "" ||
-        this.price == undefined ||
-        this.price == ""
+        this.id == undefined ||
+        this.id == "" ||
+        this.item == undefined ||
+        this.item == "" ||
+        this.stock == undefined ||
+        this.stock == ""
       ) {
         this.openErrorDialog("Ingrese los campos obligatorios");
         return;
       }
-
       const product = {
-        code: this.code,
-        name: this.name,
+        id: this.id,
+        item: this.item,
+        description: this.description,
+        stock: this.stock,
         price: this.price,
-        categories: this.categories,
+       category: this.category,
+        img: this.img,
       };
-      updateProduct(this.code, product)
+      updateProduct(this.reference, product)
         .then(() => {
-          this.changeImage = false;
-          this.openSuccessDialog("Se ha actualizado el producto: " + this.code);
+          this.openSuccesDialog(
+            "Se ha actualizado el producto: " +
+              this.item +
+              " con id:" +
+              this.id
+          );
         })
-        .catch(() => this.openErrorDialog("Error al actualizar el producto"));
+        .catch(() =>
+          this.openErrorDialog("Ha ocurrido un error al actualizar el producto")
+        );
     },
-    cambiarImagen() {
-      if (this.image == undefined || this.image == "") {
-        this.openErrorDialog("La imagen es un campo obligatorio");
-        return;
-      }
-
-      const data = new FormData();
-      data.append("image", this.image);
-      updateProductImage(this.code, data)
-        .then(() =>
-          this.openSuccessDialog("Se ha actualizado el producto: " + this.code)
-        )
-        .catch(() => this.openErrorDialog("Error al actualizar el producto"));
-    },
-    removeChip(item) {
-      this.categories.splice(this.categories.indexOf(item), 1);
-      this.categories = [...this.categories];
-    },
-    openSuccessDialog(mensaje) {
+    openSuccesDialog(mensaje) {
       this.snackbarText = mensaje;
       this.snackbar = true;
     },
@@ -215,15 +269,40 @@ export default {
     },
     closeConfirmation() {
       this.snackbar = false;
-      this.$router.push("/products");
+      this.$router.push("/productlist");
     },
   },
 };
 </script>
 
-<style scope>
+<style>
 .botones {
-  display: flex;
-  justify-content: right;
+  float: right;
+}
+input {
+  border-color: rgba(255, 255, 255, 0) !important;
+}
+.v-input__slot {
+  margin-left: 20px;
+}
+.v-input__prepend-outer {
+  margin-left: 30px;
+}
+.botones {
+  text-decoration: none !important;
+  padding-right: 10px;
+  padding-top: 30px;
+  float: right;
+}
+a:hover {
+  text-decoration: none;
+}
+.v-main {
+  padding: 50px 0px 0px !important;
+}
+h1 {
+  text-align: center;
+  font-weight: bold;
+  color: #494949;
 }
 </style>

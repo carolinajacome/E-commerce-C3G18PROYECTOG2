@@ -12,7 +12,7 @@
     </div>
     <v-card-actions>
       <v-spacer></v-spacer>
-      <v-btn color="success" :to="'/products/' + item.code"> Editar </v-btn>
+      <v-btn color="success" :to="'/products/' + item.id"> Editar </v-btn>
       <v-btn color="error" @click="eliminar()"> Eliminar </v-btn>
     </v-card-actions>
   </v-card>
@@ -25,10 +25,10 @@ export default {
   props: ["item"],
   methods: {
     editar() {
-      this.$router.push(`/products/${this.item.code}`);
+      this.$router.push(`/products/${this.item.id}`);
     },
     eliminar() {
-      deleteProduct(this.item.code)
+      deleteProduct(this.item.id)
         .then(() => {
           window.location.reload();
         })

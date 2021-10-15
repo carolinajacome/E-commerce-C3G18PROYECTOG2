@@ -6,7 +6,7 @@
       <v-row>
         <v-col
           v-for="product in products"
-          :key="product.code"
+          :key="product.id"
           md="4"
           sm="6"
           cols="12"
