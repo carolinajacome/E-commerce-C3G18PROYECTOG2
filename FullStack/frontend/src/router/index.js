@@ -21,6 +21,8 @@ import NotFound from "@/components/not-found/NotFound";
 import Dashboard from "@/components/dashboard/Dashboard";
 import ProductList from "@/components/dashboard/ProductList";
 import NuevoProducto from "@/components/dashboard/ProductNew";
+
+import header from "@/components/dashboard/header";
 Vue.use(Router);
 
 export default new Router({
@@ -38,6 +40,11 @@ export default new Router({
           path: "/Quienes-Somos",
           name: "Quienes-Somos",
           component: About
+        },
+        {
+          path: "/header",
+          name: "header",
+          component: header
         },
         {
           path: "/women",
