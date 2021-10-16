@@ -163,19 +163,19 @@ export default {
       isNew: true,
       nameRules: [
         (value) => !!value || "Campo Requerido.",
-        (value) => (value && value.length >= 3) || "Min 3 caracteres",
+        (value) => (value && value.length >= 3) || "Escribe mínimo 3 carácteres",
       ],
       numberRules: [(value) => !!value || "Campo Requerido."],
     };
   },
 
   created() {
-    const reference = this.$route.params.reference;
-    if (reference != undefined) {
-      getProduct(reference)
+    const id = this.$route.params.id;
+    if (id != undefined) {
+      getProduct(id)
         .then((response) => {
           const product = response.data;
-          this.reference = product.reference;
+          this.id = product.id;
           this.item = product.item;
           this.description = product.description;
           this.stock = product.stock;
@@ -193,12 +193,11 @@ export default {
   methods: {
     guardar() {
       const product = {
-        reference: this.reference,
-        name: this.name,
+        id: this.id,
+        item: this.item,
         description: this.description,
         stock: this.stock,
-        pricein: this.pricein,
-        priceout: this.priceout,
+        price: this.price,        
         category: this.category,
         img: this.img,
       };
