@@ -128,7 +128,7 @@ export default {
       };
       createUser(user)
         .then(() => {
-          console.log("Registrado correctamente");
+          console.log("Registrado correctamente"); 
         })
         .catch((err) => console.error(err));
     },
