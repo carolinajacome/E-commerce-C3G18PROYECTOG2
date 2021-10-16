@@ -1,4 +1,5 @@
 const express = require("express");
+const orderController = require("../controllers/Order.contr");
 const productController = require("../controllers/Product.contr");
 const registerController = require("../controllers/Register.cont");
 const router = express.Router();
@@ -9,6 +10,11 @@ const mongoose = require("mongoose");
 mongoose.connect(process.env.DB_URI)
     .then(() => console.log("Connected to database"))
     .catch((err) => console.error(err));
+
+
+// Orders routes
+router.get("/orders", orderController.getAll);
+router.post("/orders", orderController.create);
 
 // Products routes
 router.get("/products", productController.getAll);

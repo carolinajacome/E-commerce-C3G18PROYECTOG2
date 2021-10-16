@@ -122,13 +122,13 @@ export default {
         email: this.email,
         password: this.password,
         rol: {
+          id: '2',
           name: 'user'
         }
       };
       createUser(user)
         .then(() => {
           console.log("Registrado correctamente");
-          console.log(this.name, this.last_name, this.email, this.password);
         })
         .catch((err) => console.error(err));
     },
