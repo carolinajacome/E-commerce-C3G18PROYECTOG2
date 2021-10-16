@@ -2,6 +2,7 @@ const express = require("express");
 const orderController = require("../controllers/Order.contr");
 const productController = require("../controllers/Product.contr");
 const registerController = require("../controllers/Register.cont");
+const userController = require("../controllers/Login.cont")
 const router = express.Router();
 
 // Mongo DB
@@ -29,6 +30,7 @@ router.get("/registers", registerController.getAll); //Para hacer pruebas y veri
 router.get('/registers/:email', registerController.getByEmail);
 
 //Users routes
-
+router.post("/user", userController.insert);
+router.post("/authenticate", userController.validateLogin);
 
 module.exports = router;

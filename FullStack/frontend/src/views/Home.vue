@@ -3,13 +3,16 @@
 </template>
 
 <script>
-  import HelloWorld from '../components/HelloWorld'
+  import HelloWorld from '../components/HelloWorld';
+  import header from "../components/dashboard/header";
 
   export default {
     name: 'Home',
+    name: 'header',
 
     components: {
-      HelloWorld,
+    header,
+    HelloWorld,
     },
   }
 </script>
